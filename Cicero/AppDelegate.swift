@@ -44,17 +44,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             title = "Welcome to Capodimonte!"
             body = "Click on the notification to start your tour"
             identifier = "gardenNotification"
-        case RegionIdentifier.Museum.rawValue:
-            title = "You have entered the museum"
-            body = "Listen to the instructions about navigation"
-            identifier = "museumNotification"
-        case RegionIdentifier.Art.rawValue:
-            title = "Art Name"
+            LocationManager.shared.collectionAtCurrentLocation = CollectionType(rawValue: CollectionType.giardini.rawValue)
+        case RegionIdentifier.Armory.rawValue:
+            title = "You have entered the armory"
+            body = "Listen to the information"
+            identifier = "armoryNotification"
+            LocationManager.shared.collectionAtCurrentLocation = CollectionType(rawValue: CollectionType.armeria.rawValue)
+        case RegionIdentifier.Apartment.rawValue:
+            title = "You have entered Apartment"
             body = "Listen to the information"
             identifier = "artNotification"
+            LocationManager.shared.collectionAtCurrentLocation = CollectionType(rawValue: CollectionType.appartamentiReali.rawValue)
         default:
             return
         }
+        LocationManager.shared.setNewLocation()
         UserNotificationHelper.shared.createNotification(title: title, body: body, identifier: identifier)
     }
     
@@ -64,7 +68,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "main")
+        let vc = storyboard.instantiateViewController(withIdentifier: "position")
         
         self.window?.rootViewController = vc
         
