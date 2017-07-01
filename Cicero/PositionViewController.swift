@@ -75,6 +75,12 @@ extension PositionViewController: UITableViewDataSource, UITableViewDelegate {
         
         aCell.title.text = artPieceDataSource[indexPath.row].title
         aCell.descriptions.text = artPieceDataSource[indexPath.row].descr
+        
+        //Luigi: Aggiunta parte di accessibilità
+        aCell.isAccessibilityElement = true
+        aCell.accessibilityLabel = aCell.title.text
+        aCell.accessibilityValue = artPieceDataSource[indexPath.row].voiceOverDescription
+        
 
         aCell.setIcon(
             iconImage: artPieceDataSource[indexPath.row].image!,
