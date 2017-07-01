@@ -77,10 +77,10 @@
                                                         <constraint firstAttribute="width" secondItem="e4T-kB-9vB" secondAttribute="height" multiplier="1:1" id="Y4b-FM-XeH"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xFN-hP-1ka">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xFN-hP-1ka" userLabel="topCircle">
                                                     <rect key="frame" x="8" y="0.0" width="160.5" height="160.5"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NpQ-Z4-0jM">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NpQ-Z4-0jM" userLabel="bottomCircle">
                                                     <rect key="frame" x="8" y="0.0" width="160.5" height="160.5"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h4s-Ky-uhA">
@@ -132,10 +132,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="bottomCircle" destination="NpQ-Z4-0jM" id="JCY-MT-feR"/>
                                             <outlet property="descriptions" destination="UwO-f7-B7K" id="zMB-bQ-IIO"/>
                                             <outlet property="photo" destination="h4s-Ky-uhA" id="p8b-45-KbE"/>
                                             <outlet property="photoContainer" destination="e4T-kB-9vB" id="fTb-Sh-ALC"/>
                                             <outlet property="title" destination="Qp2-nv-3kw" id="7DB-gi-HQl"/>
+                                            <outlet property="topCircle" destination="xFN-hP-1ka" id="AD8-vJ-fz0"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

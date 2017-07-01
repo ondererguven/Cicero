@@ -78,11 +78,13 @@ extension PositionViewController: UITableViewDataSource, UITableViewDelegate {
 
         aCell.setIcon(
             iconImage: artPieceDataSource[indexPath.row].image!,
-            container: artPieceDataSource[indexPath.row].imageContainer,
             tintColor: Collection.get.color(forColletionType: collection),
             internalColor: Collection.get.color(forColletionType: collection),
-            isSelected: indexPath.row == LocationManager.shared.currentArtPieceIndex
+            isSelected: indexPath.row == LocationManager.shared.currentArtPieceIndex,
+            type: artPieceDataSource[indexPath.row].type
         )
+        
+        
         
         return aCell
     }
