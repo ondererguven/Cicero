@@ -75,7 +75,6 @@ extension PositionViewController: UITableViewDataSource, UITableViewDelegate {
         
         aCell.title.text = artPieceDataSource[indexPath.row].title
         aCell.descriptions.text = artPieceDataSource[indexPath.row].descr
-<<<<<<< HEAD
         
         //Luigi: Aggiunta parte di accessibilità
         aCell.isAccessibilityElement = true
@@ -99,7 +98,6 @@ extension PositionViewController: UITableViewDataSource, UITableViewDelegate {
             aCell.photo.tintColor = UIColor.white
         }
         // do selection magic
-=======
 
         aCell.setIcon(
             iconImage: artPieceDataSource[indexPath.row].image!,
@@ -108,7 +106,6 @@ extension PositionViewController: UITableViewDataSource, UITableViewDelegate {
             internalColor: Collection.get.color(forColletionType: collection),
             isSelected: indexPath.row == LocationManager.shared.currentArtPieceIndex
         )
->>>>>>> 38025003c5f26124443efa7101baf0f79c8820e8
         
         return aCell
     }
