@@ -28,7 +28,7 @@ class PositionViewController: UIViewController {
         // set up
         headerTitle.text = collection.rawValue
         cellHeight = self.view.frame.height / 5
-        headerView.frame.size.height = cellHeight / 2
+        headerView.frame.size.height = cellHeight * 2 / 3
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -63,6 +63,12 @@ extension PositionViewController: UITableViewDataSource, UITableViewDelegate {
         aCell.photoContainer.tintColor = color
         
         let isSelected = indexPath.row == LocationManager.shared.currentArtPieceIndex
+        if isSelected {
+            aCell.photoContainer.image = #imageLiteral(resourceName: "circleFull")
+            aCell.photoContainer.image = aCell.photoContainer.image!.withRenderingMode(.alwaysTemplate)
+            aCell.photoContainer.tintColor = color
+            aCell.photo.tintColor = UIColor.white
+        }
         // do selection magic
         
         return aCell
