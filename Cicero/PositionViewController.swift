@@ -27,12 +27,34 @@ class PositionViewController: UIViewController {
         
         // set up
         headerTitle.text = collection.rawValue
+        headerView.backgroundColor = Collection.get.color(forColletionType: collection)
         cellHeight = self.view.frame.height / 5
         headerView.frame.size.height = cellHeight * 2 / 3
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(PositionViewController.locationChanged(notification:)), name: NSNotification.Name(rawValue: "locationChanged"), object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+    func locationChanged(notification: Notification) {
+        if let info = notification.userInfo {
+            let userLocation = info["location"] as! CollectionType
+            artPieceDataSource = Collection.of.artPiece[userLocation]
+            headerTitle.text = userLocation.rawValue
+            tableView.reloadData()
+        }
     }
 
 }
@@ -53,6 +75,7 @@ extension PositionViewController: UITableViewDataSource, UITableViewDelegate {
         
         aCell.title.text = artPieceDataSource[indexPath.row].title
         aCell.descriptions.text = artPieceDataSource[indexPath.row].descr
+<<<<<<< HEAD
         
         //Luigi: Aggiunta parte di accessibilità
         aCell.isAccessibilityElement = true
@@ -76,6 +99,16 @@ extension PositionViewController: UITableViewDataSource, UITableViewDelegate {
             aCell.photo.tintColor = UIColor.white
         }
         // do selection magic
+=======
+
+        aCell.setIcon(
+            iconImage: artPieceDataSource[indexPath.row].image!,
+            container: artPieceDataSource[indexPath.row].imageContainer,
+            tintColor: Collection.get.color(forColletionType: collection),
+            internalColor: Collection.get.color(forColletionType: collection),
+            isSelected: indexPath.row == LocationManager.shared.currentArtPieceIndex
+        )
+>>>>>>> 38025003c5f26124443efa7101baf0f79c8820e8
         
         return aCell
     }

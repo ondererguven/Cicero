@@ -6,6 +6,7 @@
 //  Copyright © 2017 taralli. All rights reserved.
 //
 
+import NotificationCenter
 import CoreLocation
 
 class LocationManager: CLLocationManager {
@@ -20,9 +21,12 @@ class LocationManager: CLLocationManager {
         super.init()
         self.requestAlwaysAuthorization()
         self.desiredAccuracy = kCLLocationAccuracyBest
-        self.collectionAtCurrentLocation = .appartamentiReali
+        self.collectionAtCurrentLocation = .giardini
         self.currentArtPieceIndex = 0
     }
     
-    
+    func setNewLocation() {
+        let locationChangedNotification = Notification(name: Notification.Name(rawValue: "locationChanged"), object: nil, userInfo: ["location": collectionAtCurrentLocation])
+        NotificationCenter.default.post(locationChangedNotification)
+    }
 }

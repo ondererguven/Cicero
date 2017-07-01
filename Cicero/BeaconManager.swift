@@ -9,9 +9,9 @@
 import CoreLocation
 
 enum RegionIdentifier: String {
-    case Museum = "museum"
+    case Apartment = "apartment"
     case Garden = "garden"
-    case Art = "art"
+    case Armory = "armory"
 }
 
 let beaconUUID = "B9407F30-F5F8-466E-AFF9-25556B57FE6D"
@@ -21,18 +21,18 @@ class BeaconManager {
     static let shared = BeaconManager()
     
     private var gardenRegion: CLBeaconRegion
-    private var museumRegion: CLBeaconRegion
-    private var artRegion: CLBeaconRegion
+    private var apartmentRegion: CLBeaconRegion
+    private var armoryRegion: CLBeaconRegion
     
     private init() {
         gardenRegion = CLBeaconRegion(proximityUUID: UUID(uuidString: beaconUUID)!, major: 37447, minor: 29234, identifier: RegionIdentifier.Garden.rawValue)
         
-        museumRegion = CLBeaconRegion(proximityUUID: UUID(uuidString: beaconUUID)!, major: 54280, minor: 36780, identifier: RegionIdentifier.Museum.rawValue)
+        apartmentRegion = CLBeaconRegion(proximityUUID: UUID(uuidString: beaconUUID)!, major: 54280, minor: 36780, identifier: RegionIdentifier.Apartment.rawValue)
         
-        artRegion = CLBeaconRegion(proximityUUID: UUID(uuidString: beaconUUID)!, major: 41868, minor: 24244, identifier: RegionIdentifier.Art.rawValue)
+        armoryRegion = CLBeaconRegion(proximityUUID: UUID(uuidString: beaconUUID)!, major: 41868, minor: 24244, identifier: RegionIdentifier.Armory.rawValue)
     }
     
     func getRegions() -> [CLBeaconRegion] {
-        return [gardenRegion, museumRegion, artRegion]
+        return [gardenRegion, apartmentRegion, armoryRegion]
     }
 }
