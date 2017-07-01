@@ -12,6 +12,7 @@
 		EC2334E21F07904B00C80637 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2334E01F07904B00C80637 /* Main.storyboard */; };
 		EC2334E41F07904B00C80637 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC2334E31F07904B00C80637 /* Assets.xcassets */; };
 		EC2334E71F07904B00C80637 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2334E51F07904B00C80637 /* LaunchScreen.storyboard */; };
+		EC2334F31F07A06A00C80637 /* UserNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2334F21F07A06A00C80637 /* UserNotificationHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		EC2334E31F07904B00C80637 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC2334E61F07904B00C80637 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC2334E81F07904B00C80637 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC2334F21F07A06A00C80637 /* UserNotificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNotificationHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,10 @@
 		EC2334DB1F07904B00C80637 /* Cicero */ = {
 			isa = PBXGroup;
 			children = (
+				EC2334F11F07967500C80637 /* Helpers */,
+				EC2334EE1F07963A00C80637 /* Model */,
+				EC2334EF1F07964700C80637 /* View */,
+				EC2334F01F07964D00C80637 /* Controller */,
 				EC2334DC1F07904B00C80637 /* AppDelegate.swift */,
 				EC2334DE1F07904B00C80637 /* ViewController.swift */,
 				EC2334E01F07904B00C80637 /* Main.storyboard */,
@@ -62,6 +68,35 @@
 				EC2334E81F07904B00C80637 /* Info.plist */,
 			);
 			path = Cicero;
+			sourceTree = "<group>";
+		};
+		EC2334EE1F07963A00C80637 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EC2334EF1F07964700C80637 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EC2334F01F07964D00C80637 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		EC2334F11F07967500C80637 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EC2334F21F07A06A00C80637 /* UserNotificationHelper.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +131,7 @@
 				TargetAttributes = {
 					EC2334D81F07904B00C80637 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 9ZVMLP4E42;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -136,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC2334F31F07A06A00C80637 /* UserNotificationHelper.swift in Sources */,
 				EC2334DF1F07904B00C80637 /* ViewController.swift in Sources */,
 				EC2334DD1F07904B00C80637 /* AppDelegate.swift in Sources */,
 			);
@@ -260,10 +297,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9ZVMLP4E42;
 				INFOPLIST_FILE = Cicero/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.taralli.Cicero;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.iosda.cohort2.-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -272,10 +312,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9ZVMLP4E42;
 				INFOPLIST_FILE = Cicero/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.taralli.Cicero;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.iosda.cohort2.-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -299,6 +342,7 @@
 				EC2334ED1F07904B00C80637 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

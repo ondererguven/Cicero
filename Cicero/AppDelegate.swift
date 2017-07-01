@@ -7,16 +7,64 @@
 //
 
 import UIKit
+import UserNotifications
+import CoreLocation
+
+enum NotificationName: String {
+    case Museum = "museum"
+    case Garden = "garden"
+    case Art = "art"
+}
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, CLLocationManagerDelegate {
 
     var window: UIWindow?
 
+    let locationManager = CLLocationManager()
+    
+    let gardenRegion = CLBeaconRegion(proximityUUID: UUID(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, major: 37447, minor: 29234, identifier: "gardenRegion")
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) {(accepted, error) in
+            if !accepted {
+                print("Notification access denied.")
+            }
+        }
+        
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startMonitoring(for: gardenRegion)
+        locationManager.delegate = self
+        
+        UNUserNotificationCenter.current().delegate = self
+        
         return true
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        print("you entered \(region)")
+        
+        UserNotificationHelper.shared.createNotification(title: "Welcome to Capodimonte", body: "Click on the notification to start your tour", identifier: "gardenNotification")
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        print("you exited \(region)")
+        
+        let notification = Notification(name: Notification.Name(NotificationName.Museum.rawValue))
+        NotificationCenter.default.post(notification)
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "")
+//        
+//        if let rootVC = self.window?.rootViewController! as? UINavigationController {
+//            rootVC.pushViewController(vc, animated: true)
+//        }
+        
+        completionHandler()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
