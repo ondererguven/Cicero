@@ -81,30 +81,12 @@ extension PositionViewController: UITableViewDataSource, UITableViewDelegate {
         aCell.accessibilityLabel = aCell.title.text
         aCell.accessibilityValue = aCell.descriptions.text
         
-        aCell.photoContainer.image = artPieceDataSource[indexPath.row].imageContainer
-        aCell.photoContainer.image = aCell.photoContainer.image!.withRenderingMode(.alwaysTemplate)
-        aCell.photo.image = artPieceDataSource[indexPath.row].image
-        aCell.photo.image = aCell.photo.image!.withRenderingMode(.alwaysTemplate)
-//        let color = UIColor.init(red: 168/255, green: 37/255, blue: 63/255, alpha: 1)
-        let color = UIColor.init(red: 63/255, green: 83/255, blue: 188/255, alpha: 1)
-        aCell.photo.tintColor = color
-        aCell.photoContainer.tintColor = color
-        
-        let isSelected = indexPath.row == LocationManager.shared.currentArtPieceIndex
-        if isSelected {
-            aCell.photoContainer.image = #imageLiteral(resourceName: "circleFull")
-            aCell.photoContainer.image = aCell.photoContainer.image!.withRenderingMode(.alwaysTemplate)
-            aCell.photoContainer.tintColor = color
-            aCell.photo.tintColor = UIColor.white
-        }
-        // do selection magic
 
         aCell.setIcon(
             iconImage: artPieceDataSource[indexPath.row].image!,
-            container: artPieceDataSource[indexPath.row].imageContainer,
             tintColor: Collection.get.color(forColletionType: collection),
             internalColor: Collection.get.color(forColletionType: collection),
-            isSelected: indexPath.row == LocationManager.shared.currentArtPieceIndex
+            isSelected: indexPath.row == LocationManager.shared.currentArtPieceIndex, type: artPieceDataSource[indexPath.row].type
         )
         
         return aCell

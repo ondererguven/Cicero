@@ -12,27 +12,18 @@ import UIKit
 class ArtPiece {
     
     let image: UIImage?
-    let imageContainer: UIImage
     let title: String
     let descr: String
     let voiceOverDescription: String
+    let type: ContainerType
     
     init(image: UIImage?, imageContainer: ContainerType, title: String, descr: String, voiceOver: String) {
         self.image = image
         self.title = title
         self.descr = descr
         self.voiceOverDescription = voiceOver
+        self.type = imageContainer
         
-        switch imageContainer {
-        case .start:
-            self.imageContainer = #imageLiteral(resourceName: "circle")
-        case .middle:
-            self.imageContainer = #imageLiteral(resourceName: "circle")
-        case .ending:
-            self.imageContainer = #imageLiteral(resourceName: "circle")
-        case .selected:
-            self.imageContainer = #imageLiteral(resourceName: "circleFull")
-        }
     }
     
 }
@@ -48,5 +39,4 @@ enum ContainerType {
     case start
     case middle
     case ending
-    case selected
 }
