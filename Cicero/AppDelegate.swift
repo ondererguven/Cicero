@@ -16,6 +16,14 @@ enum NotificationName: String {
     case Art = "art"
 }
 
+enum RegionIdentifier: String {
+    case Museum = "museum"
+    case Garden = "garden"
+    case Art = "art"
+}
+
+let beaconUUID = "B9407F30-F5F8-466E-AFF9-25556B57FE6D"
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, CLLocationManagerDelegate {
 
@@ -23,7 +31,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     let locationManager = CLLocationManager()
     
-    let gardenRegion = CLBeaconRegion(proximityUUID: UUID(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, major: 37447, minor: 29234, identifier: "gardenRegion")
+    let gardenRegion = CLBeaconRegion(proximityUUID: UUID(uuidString: beaconUUID)!, major: 37447, minor: 29234, identifier: RegionIdentifier.Garden.rawValue)
+    
+    let museumRegion = CLBeaconRegion(proximityUUID: UUID(uuidString: beaconUUID)!, major: 54280, minor: 36780, identifier: RegionIdentifier.Museum.rawValue)
+    
+    let artRegion = CLBeaconRegion(proximityUUID: UUID(uuidString: beaconUUID)!, major: 41868, minor: 24244, identifier: RegionIdentifier.Art.rawValue)
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -34,7 +46,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }
         
         locationManager.requestAlwaysAuthorization()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startMonitoring(for: gardenRegion)
+        locationManager.startMonitoring(for: museumRegion)
+        locationManager.startMonitoring(for: artRegion)
         locationManager.delegate = self
         
         UNUserNotificationCenter.current().delegate = self
@@ -44,25 +59,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
         print("you entered \(region)")
+        var title: String
+        var body: String
+        var identifier: String
         
-        UserNotificationHelper.shared.createNotification(title: "Welcome to Capodimonte", body: "Click on the notification to start your tour", identifier: "gardenNotification")
-        
+        switch region.identifier {
+        case RegionIdentifier.Garden.rawValue:
+            title = "Welcome to Capodimonte!"
+            body = "Click on the notification to start your tour"
+            identifier = "gardenNotification"
+        case RegionIdentifier.Museum.rawValue:
+            title = "You have entered the museum"
+            body = "Listen to the instructions about navigation"
+            identifier = "museumNotification"
+        case RegionIdentifier.Art.rawValue:
+            title = "Art Name"
+            body = "Listen to the information"
+            identifier = "artNotification"
+        default:
+            return
+        }
+        UserNotificationHelper.shared.createNotification(title: title, body: body, identifier: identifier)
     }
     
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
         print("you exited \(region)")
-        
-        let notification = Notification(name: Notification.Name(NotificationName.Museum.rawValue))
-        NotificationCenter.default.post(notification)
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let vc = storyboard.instantiateViewController(withIdentifier: "")
-//        
-//        if let rootVC = self.window?.rootViewController! as? UINavigationController {
-//            rootVC.pushViewController(vc, animated: true)
-//        }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "main")
+        
+        self.window?.rootViewController = vc
         
         completionHandler()
     }

@@ -8,7 +8,6 @@
 
 import UserNotifications
 
-
 class UserNotificationHelper {
     
     enum NotificationName: String {
@@ -22,9 +21,6 @@ class UserNotificationHelper {
     private init() {}
     
     func createNotification(title: String, body: String, identifier: String) {
-        let notification = Notification(name: Notification.Name(NotificationName.Museum.rawValue))
-        NotificationCenter.default.post(notification)
-        
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
         
         let content = UNMutableNotificationContent()
