@@ -22,12 +22,18 @@ class PositionViewCell: UITableViewCell {
         photo.contentMode = .scaleAspectFit
         photoContainer.contentMode = .scaleAspectFit
         
+        
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func setIcon(iconImage: UIImage, container: UIImage, tintColor: UIColor, internalColor: UIColor, isSelected: Bool) {
+        photo.image = iconImage
+        photo.image = photo.image!.withRenderingMode(.alwaysTemplate)
+        photo.tintColor = isSelected ? .white : tintColor
+        
+        photoContainer.image = isSelected ? #imageLiteral(resourceName: "circleFull") : container
+        photoContainer.image = photoContainer.image!.withRenderingMode(.alwaysTemplate)
+        photoContainer.tintColor = internalColor
+        
     }
 
     

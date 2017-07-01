@@ -20,7 +20,7 @@ class LocationManager: CLLocationManager {
         super.init()
         self.requestAlwaysAuthorization()
         self.desiredAccuracy = kCLLocationAccuracyBest
-        self.collectionAtCurrentLocation = .appartamentiReali
+        self.collectionAtCurrentLocation = .giardini
         self.currentArtPieceIndex = 0
     }
     
