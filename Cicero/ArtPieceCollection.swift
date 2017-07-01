@@ -12,6 +12,7 @@ import UIKit
 class Collection {
     
     static let of = Collection()
+    static let get = Collection()
     
     let artPiece: [CollectionType : [ArtPiece]]!
     
@@ -51,7 +52,7 @@ class Collection {
 // MARK: - tool for getting proper color type
 extension Collection {
 
-    func getColor(forColletionType type: CollectionType) -> UIColor {
+    func color(forColletionType type: CollectionType) -> UIColor {
         switch type {
         case .appartamentiReali:
             return Palette.colorFor.blue
