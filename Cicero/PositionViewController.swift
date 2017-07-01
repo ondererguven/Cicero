@@ -32,8 +32,29 @@ class PositionViewController: UIViewController {
         headerView.frame.size.height = cellHeight * 2 / 3
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(PositionViewController.locationChanged(notification:)), name: NSNotification.Name(rawValue: "locationChanged"), object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+    func locationChanged(notification: Notification) {
+        if let info = notification.userInfo {
+            let userLocation = info["location"] as! CollectionType
+            artPieceDataSource = Collection.of.artPiece[userLocation]
+            headerTitle.text = userLocation.rawValue
+            tableView.reloadData()
+        }
     }
 
 }
