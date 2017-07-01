@@ -62,6 +62,8 @@ extension PositionViewController: UITableViewDataSource, UITableViewDelegate {
         aCell.photo.tintColor = color
         aCell.photoContainer.tintColor = color
         
+        let isSelected = indexPath.row == LocationManager.shared.currentArtPieceIndex
+        // do selection magic
         
         return aCell
     }

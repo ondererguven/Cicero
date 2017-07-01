@@ -12,6 +12,7 @@
 		813E140D1F07E11E0044C5B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 813E140C1F07E11E0044C5B5 /* Assets.xcassets */; };
 		813E14181F07FF740044C5B5 /* ArtPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E14171F07FF740044C5B5 /* ArtPiece.swift */; };
 		813E141A1F07FF9B0044C5B5 /* ArtPieceCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E14191F07FF9B0044C5B5 /* ArtPieceCollection.swift */; };
+		813E141C1F082C350044C5B5 /* AVManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E141B1F082C350044C5B5 /* AVManager.swift */; };
 		EC0E40031F07DE9E00FBC624 /* BeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0E40021F07DE9E00FBC624 /* BeaconManager.swift */; };
 		EC2334DD1F07904B00C80637 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2334DC1F07904B00C80637 /* AppDelegate.swift */; };
 		EC2334DF1F07904B00C80637 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2334DE1F07904B00C80637 /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 		813E140C1F07E11E0044C5B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		813E14171F07FF740044C5B5 /* ArtPiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtPiece.swift; sourceTree = "<group>"; };
 		813E14191F07FF9B0044C5B5 /* ArtPieceCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtPieceCollection.swift; sourceTree = "<group>"; };
+		813E141B1F082C350044C5B5 /* AVManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVManager.swift; sourceTree = "<group>"; };
 		EC0E40021F07DE9E00FBC624 /* BeaconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconManager.swift; sourceTree = "<group>"; };
 		EC2334D91F07904B00C80637 /* Cicero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cicero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC2334DC1F07904B00C80637 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				EC2334F21F07A06A00C80637 /* UserNotificationHelper.swift */,
 				EC0E40021F07DE9E00FBC624 /* BeaconManager.swift */,
 				EC72E1791F07E30E0064068B /* LocationManager.swift */,
+				813E141B1F082C350044C5B5 /* AVManager.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				EC2334DD1F07904B00C80637 /* AppDelegate.swift in Sources */,
 				813E14091F07D83D0044C5B5 /* PositionViewController.swift in Sources */,
 				813E14181F07FF740044C5B5 /* ArtPiece.swift in Sources */,
+				813E141C1F082C350044C5B5 /* AVManager.swift in Sources */,
 				813E140B1F07DBEC0044C5B5 /* PositionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

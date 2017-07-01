@@ -12,12 +12,16 @@ class LocationManager: CLLocationManager {
     
     static let shared = LocationManager()
     
-    var collectionAtCurrentLocation: CollectionType = .appartamentiReali
+    // context to load the current position
+    var collectionAtCurrentLocation: CollectionType!
+    var currentArtPieceIndex: Int!
     
     private override init() {
         super.init()
         self.requestAlwaysAuthorization()
         self.desiredAccuracy = kCLLocationAccuracyBest
+        self.collectionAtCurrentLocation = .appartamentiReali
+        self.currentArtPieceIndex = 0
     }
     
     
