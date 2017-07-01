@@ -78,7 +78,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h4s-Ky-uhA">
-                                                    <rect key="frame" x="48" y="40" width="80.5" height="80.5"/>
+                                                    <rect key="frame" x="68" y="60" width="40.5" height="40.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="h4s-Ky-uhA" secondAttribute="height" multiplier="1:1" id="6R7-lG-dKy"/>
                                                     </constraints>
@@ -99,7 +99,7 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="h4s-Ky-uhA" firstAttribute="width" secondItem="e4T-kB-9vB" secondAttribute="width" multiplier="0.5" id="0M6-rF-Jv0"/>
+                                                <constraint firstItem="h4s-Ky-uhA" firstAttribute="width" secondItem="e4T-kB-9vB" secondAttribute="width" multiplier="1:4" id="0M6-rF-Jv0"/>
                                                 <constraint firstItem="h4s-Ky-uhA" firstAttribute="centerY" secondItem="e4T-kB-9vB" secondAttribute="centerY" id="34w-1Y-C5b"/>
                                                 <constraint firstItem="e4T-kB-9vB" firstAttribute="top" secondItem="sHn-Qu-6rp" secondAttribute="topMargin" constant="-8" id="LgV-am-7SC"/>
                                                 <constraint firstItem="e4T-kB-9vB" firstAttribute="height" secondItem="sHn-Qu-6rp" secondAttribute="height" id="Qep-fe-7FU"/>
