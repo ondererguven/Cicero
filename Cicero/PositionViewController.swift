@@ -56,6 +56,9 @@ extension PositionViewController: UITableViewDataSource, UITableViewDelegate {
         aCell.photoContainer.image = artPieceDataSource[indexPath.row].imageContainer
         aCell.photo.image = artPieceDataSource[indexPath.row].image
         
+        let isSelected = indexPath.row == LocationManager.shared.currentArtPieceIndex
+        // do selection magic
+        
         return aCell
     }
     
