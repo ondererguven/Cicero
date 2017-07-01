@@ -16,11 +16,14 @@ class PositionViewController: UIViewController {
     var headerTitle: String!
     var cellHeight: CGFloat!
     var headerHeight: CGFloat!
-    var artPieceDataSource: [ArtPiece] = Collection.of.artPiece
+    var collection: CollectionType = .a
+    var artPieceDataSource: [ArtPiece]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // load data
+        artPieceDataSource = Collection.of.artPiece[collection]
         
         // set up
         headerTitle = "Entrance"

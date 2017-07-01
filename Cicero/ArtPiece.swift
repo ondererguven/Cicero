@@ -24,3 +24,8 @@ class ArtPiece {
     }
     
 }
+
+
+enum CollectionType {
+    case a
+}

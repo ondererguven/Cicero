@@ -12,13 +12,16 @@ class Collection {
     
     static let of = Collection()
     
-    let artPiece: [ArtPiece]!
+    let artPiece: [CollectionType : [ArtPiece]]!
     
     init() {
         
-        artPiece = []
+        artPiece = [:]
         
-        artPiece.append( ArtPiece(image: nil, title: "First", descr: "first", voiceOver: "vo") )
+        // sample
+        artPiece[.a] = [
+            ArtPiece(image: nil, title: "First", descr: "first", voiceOver: "vo")
+        ]
         
     }
     
