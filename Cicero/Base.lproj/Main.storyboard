@@ -49,7 +49,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgm-wn-lbx">
-                                            <rect key="frame" x="8" y="8" width="576" height="112"/>
+                                            <rect key="frame" x="8" y="8" width="359" height="112"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -77,6 +77,12 @@
                                                         <constraint firstAttribute="width" secondItem="e4T-kB-9vB" secondAttribute="height" multiplier="1:1" id="Y4b-FM-XeH"/>
                                                     </constraints>
                                                 </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xFN-hP-1ka">
+                                                    <rect key="frame" x="8" y="0.0" width="160.5" height="160.5"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NpQ-Z4-0jM">
+                                                    <rect key="frame" x="8" y="0.0" width="160.5" height="160.5"/>
+                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h4s-Ky-uhA">
                                                     <rect key="frame" x="68" y="60" width="40.5" height="40.5"/>
                                                     <constraints>
@@ -103,8 +109,16 @@
                                                 <constraint firstItem="h4s-Ky-uhA" firstAttribute="centerY" secondItem="e4T-kB-9vB" secondAttribute="centerY" id="34w-1Y-C5b"/>
                                                 <constraint firstItem="e4T-kB-9vB" firstAttribute="top" secondItem="sHn-Qu-6rp" secondAttribute="topMargin" constant="-8" id="LgV-am-7SC"/>
                                                 <constraint firstItem="e4T-kB-9vB" firstAttribute="height" secondItem="sHn-Qu-6rp" secondAttribute="height" id="Qep-fe-7FU"/>
+                                                <constraint firstItem="xFN-hP-1ka" firstAttribute="height" secondItem="e4T-kB-9vB" secondAttribute="height" id="Qp6-7l-gDL"/>
+                                                <constraint firstItem="xFN-hP-1ka" firstAttribute="centerX" secondItem="e4T-kB-9vB" secondAttribute="centerX" id="TBw-g2-aAe"/>
+                                                <constraint firstItem="xFN-hP-1ka" firstAttribute="width" secondItem="e4T-kB-9vB" secondAttribute="width" id="Vos-xq-pgW"/>
                                                 <constraint firstAttribute="leadingMargin" secondItem="e4T-kB-9vB" secondAttribute="leading" id="YxM-hV-QsX"/>
                                                 <constraint firstItem="h4s-Ky-uhA" firstAttribute="centerX" secondItem="e4T-kB-9vB" secondAttribute="centerX" id="eyf-Q2-I1y"/>
+                                                <constraint firstItem="NpQ-Z4-0jM" firstAttribute="height" secondItem="e4T-kB-9vB" secondAttribute="height" id="hrj-hO-EaQ"/>
+                                                <constraint firstItem="xFN-hP-1ka" firstAttribute="centerY" secondItem="e4T-kB-9vB" secondAttribute="centerY" id="jd2-zF-hBl"/>
+                                                <constraint firstItem="NpQ-Z4-0jM" firstAttribute="width" secondItem="e4T-kB-9vB" secondAttribute="width" id="lMG-TA-p2u"/>
+                                                <constraint firstItem="NpQ-Z4-0jM" firstAttribute="centerX" secondItem="e4T-kB-9vB" secondAttribute="centerX" id="tOt-p1-3Kw"/>
+                                                <constraint firstItem="NpQ-Z4-0jM" firstAttribute="centerY" secondItem="e4T-kB-9vB" secondAttribute="centerY" id="tgr-ZS-a46"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

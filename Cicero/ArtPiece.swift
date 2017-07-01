@@ -26,6 +26,7 @@ class ArtPiece {
         switch imageContainer {
         case .start:
             self.imageContainer = #imageLiteral(resourceName: "circle")
+            
         case .middle:
             self.imageContainer = #imageLiteral(resourceName: "circle")
         case .ending:
