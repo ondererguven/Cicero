@@ -75,6 +75,31 @@ extension PositionViewController: UITableViewDataSource, UITableViewDelegate {
         
         aCell.title.text = artPieceDataSource[indexPath.row].title
         aCell.descriptions.text = artPieceDataSource[indexPath.row].descr
+<<<<<<< HEAD
+        
+        //Luigi: Aggiunta parte di accessibilità
+        aCell.isAccessibilityElement = true
+        aCell.accessibilityLabel = aCell.title.text
+        aCell.accessibilityValue = aCell.descriptions.text
+        
+        aCell.photoContainer.image = artPieceDataSource[indexPath.row].imageContainer
+        aCell.photoContainer.image = aCell.photoContainer.image!.withRenderingMode(.alwaysTemplate)
+        aCell.photo.image = artPieceDataSource[indexPath.row].image
+        aCell.photo.image = aCell.photo.image!.withRenderingMode(.alwaysTemplate)
+//        let color = UIColor.init(red: 168/255, green: 37/255, blue: 63/255, alpha: 1)
+        let color = UIColor.init(red: 63/255, green: 83/255, blue: 188/255, alpha: 1)
+        aCell.photo.tintColor = color
+        aCell.photoContainer.tintColor = color
+        
+        let isSelected = indexPath.row == LocationManager.shared.currentArtPieceIndex
+        if isSelected {
+            aCell.photoContainer.image = #imageLiteral(resourceName: "circleFull")
+            aCell.photoContainer.image = aCell.photoContainer.image!.withRenderingMode(.alwaysTemplate)
+            aCell.photoContainer.tintColor = color
+            aCell.photo.tintColor = UIColor.white
+        }
+        // do selection magic
+=======
 
         aCell.setIcon(
             iconImage: artPieceDataSource[indexPath.row].image!,
@@ -83,9 +108,11 @@ extension PositionViewController: UITableViewDataSource, UITableViewDelegate {
             internalColor: Collection.get.color(forColletionType: collection),
             isSelected: indexPath.row == LocationManager.shared.currentArtPieceIndex
         )
+>>>>>>> 38025003c5f26124443efa7101baf0f79c8820e8
         
         return aCell
     }
+    
     
     // MARK: Fix height
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
