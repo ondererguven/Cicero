@@ -26,8 +26,8 @@ class ArtPiece {
 }
 
 
-enum CollectionType {
-    case appartamentiReali
-    case armeria
-    case giardini
+enum CollectionType: String {
+    case appartamentiReali = "Appartamenti Reali"
+    case armeria = "Armeria"
+    case giardini = "Giardini"
 }

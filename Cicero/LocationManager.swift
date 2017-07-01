@@ -12,6 +12,8 @@ class LocationManager: CLLocationManager {
     
     static let shared = LocationManager()
     
+    var collectionAtCurrentLocation: CollectionType = .appartamentiReali
+    
     private override init() {
         super.init()
         self.requestAlwaysAuthorization()

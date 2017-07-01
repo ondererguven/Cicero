@@ -130,6 +130,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="headerTitle" destination="Zgm-wn-lbx" id="gnT-7c-uc1"/>
                         <outlet property="headerView" destination="QlS-0i-69J" id="1z7-X4-FkA"/>
                         <outlet property="tableView" destination="oMk-gG-jdk" id="YcL-Rr-2SV"/>
                     </connections>

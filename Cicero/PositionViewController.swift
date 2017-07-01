@@ -12,11 +12,11 @@ class PositionViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var headerTitle: UILabel!
     
-    var headerTitle: String!
     var cellHeight: CGFloat!
     var headerHeight: CGFloat!
-    var collection: CollectionType = .giardini
+    var collection: CollectionType = LocationManager.shared.collectionAtCurrentLocation
     var artPieceDataSource: [ArtPiece]!
     
     override func viewDidLoad() {
@@ -26,7 +26,7 @@ class PositionViewController: UIViewController {
         artPieceDataSource = Collection.of.artPiece[collection]
         
         // set up
-        headerTitle = "Entrance"
+        headerTitle.text = collection.rawValue
         cellHeight = self.view.frame.height / 5
         headerView.frame.size.height = cellHeight / 2
     }
