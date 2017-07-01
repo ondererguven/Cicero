@@ -53,6 +53,12 @@ extension PositionViewController: UITableViewDataSource, UITableViewDelegate {
         
         aCell.title.text = artPieceDataSource[indexPath.row].title
         aCell.descriptions.text = artPieceDataSource[indexPath.row].descr
+        
+        //Luigi: Aggiunta parte di accessibilità
+        aCell.isAccessibilityElement = true
+        aCell.accessibilityLabel = aCell.title.text
+        aCell.accessibilityValue = aCell.descriptions.text
+        
         aCell.photoContainer.image = artPieceDataSource[indexPath.row].imageContainer
         aCell.photoContainer.image = aCell.photoContainer.image!.withRenderingMode(.alwaysTemplate)
         aCell.photo.image = artPieceDataSource[indexPath.row].image
@@ -73,6 +79,7 @@ extension PositionViewController: UITableViewDataSource, UITableViewDelegate {
         
         return aCell
     }
+    
     
     // MARK: Fix height
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
