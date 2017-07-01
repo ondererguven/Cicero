@@ -30,6 +30,8 @@ class ArtPiece {
             self.imageContainer = #imageLiteral(resourceName: "circle")
         case .ending:
             self.imageContainer = #imageLiteral(resourceName: "circle")
+        case .selected:
+            self.imageContainer = #imageLiteral(resourceName: "circleFull")
         }
     }
     
@@ -46,4 +48,5 @@ enum ContainerType {
     case start
     case middle
     case ending
+    case selected
 }
