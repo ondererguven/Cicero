@@ -60,12 +60,6 @@
 				EC2334EE1F07963A00C80637 /* Model */,
 				EC2334EF1F07964700C80637 /* View */,
 				EC2334F01F07964D00C80637 /* Controller */,
-				EC2334DC1F07904B00C80637 /* AppDelegate.swift */,
-				EC2334DE1F07904B00C80637 /* ViewController.swift */,
-				EC2334E01F07904B00C80637 /* Main.storyboard */,
-				EC2334E31F07904B00C80637 /* Assets.xcassets */,
-				EC2334E51F07904B00C80637 /* LaunchScreen.storyboard */,
-				EC2334E81F07904B00C80637 /* Info.plist */,
 			);
 			path = Cicero;
 			sourceTree = "<group>";
@@ -73,6 +67,9 @@
 		EC2334EE1F07963A00C80637 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EC2334DC1F07904B00C80637 /* AppDelegate.swift */,
+				EC2334E31F07904B00C80637 /* Assets.xcassets */,
+				EC2334E81F07904B00C80637 /* Info.plist */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -80,6 +77,8 @@
 		EC2334EF1F07964700C80637 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EC2334E01F07904B00C80637 /* Main.storyboard */,
+				EC2334E51F07904B00C80637 /* LaunchScreen.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -87,6 +86,7 @@
 		EC2334F01F07964D00C80637 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EC2334DE1F07904B00C80637 /* ViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
