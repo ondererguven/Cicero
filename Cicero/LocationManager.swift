@@ -21,8 +21,10 @@ class LocationManager: CLLocationManager {
         super.init()
         self.requestAlwaysAuthorization()
         self.desiredAccuracy = kCLLocationAccuracyBest
+        //Default Value to garden section
         self.collectionAtCurrentLocation = .giardini
-        self.currentArtPieceIndex = 0
+        //Default Value to second cell
+        self.currentArtPieceIndex = 1
     }
     
     func setNewLocation() {
