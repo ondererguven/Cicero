@@ -13,9 +13,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let path = UIBezierPath()
         
-        path.move(to: <#T##CGPoint#>)
+        
+        
         
     }
 

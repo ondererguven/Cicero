@@ -10,20 +10,6 @@ import UIKit
 import UserNotifications
 import CoreLocation
 
-enum NotificationName: String {
-    case Museum = "museum"
-    case Garden = "garden"
-    case Art = "art"
-}
-
-enum RegionIdentifier: String {
-    case Museum = "museum"
-    case Garden = "garden"
-    case Art = "art"
-}
-
-let beaconUUID = "B9407F30-F5F8-466E-AFF9-25556B57FE6D"
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, CLLocationManagerDelegate {
 
@@ -31,12 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     let locationManager = CLLocationManager()
     
-    let gardenRegion = CLBeaconRegion(proximityUUID: UUID(uuidString: beaconUUID)!, major: 37447, minor: 29234, identifier: RegionIdentifier.Garden.rawValue)
-    
-    let museumRegion = CLBeaconRegion(proximityUUID: UUID(uuidString: beaconUUID)!, major: 54280, minor: 36780, identifier: RegionIdentifier.Museum.rawValue)
-    
-    let artRegion = CLBeaconRegion(proximityUUID: UUID(uuidString: beaconUUID)!, major: 41868, minor: 24244, identifier: RegionIdentifier.Art.rawValue)
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) {(accepted, error) in
@@ -47,9 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         locationManager.requestAlwaysAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.startMonitoring(for: gardenRegion)
-        locationManager.startMonitoring(for: museumRegion)
-        locationManager.startMonitoring(for: artRegion)
+        for region in BeaconManager.shared.getRegions() {
+            locationManager.startMonitoring(for: region)
+        }
         locationManager.delegate = self
         
         UNUserNotificationCenter.current().delegate = self

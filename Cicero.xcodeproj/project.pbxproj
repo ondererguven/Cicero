@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC0E40031F07DE9E00FBC624 /* BeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0E40021F07DE9E00FBC624 /* BeaconManager.swift */; };
 		EC2334DD1F07904B00C80637 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2334DC1F07904B00C80637 /* AppDelegate.swift */; };
 		EC2334DF1F07904B00C80637 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2334DE1F07904B00C80637 /* ViewController.swift */; };
 		EC2334E21F07904B00C80637 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2334E01F07904B00C80637 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC0E40021F07DE9E00FBC624 /* BeaconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconManager.swift; sourceTree = "<group>"; };
 		EC2334D91F07904B00C80637 /* Cicero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cicero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC2334DC1F07904B00C80637 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC2334DE1F07904B00C80637 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,9 +71,6 @@
 		EC2334EE1F07963A00C80637 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EC2334DC1F07904B00C80637 /* AppDelegate.swift */,
-				EC2334E31F07904B00C80637 /* Assets.xcassets */,
-				EC2334E81F07904B00C80637 /* Info.plist */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -98,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				EC2334F21F07A06A00C80637 /* UserNotificationHelper.swift */,
+				EC0E40021F07DE9E00FBC624 /* BeaconManager.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -176,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC2334F31F07A06A00C80637 /* UserNotificationHelper.swift in Sources */,
+				EC0E40031F07DE9E00FBC624 /* BeaconManager.swift in Sources */,
 				EC2334DF1F07904B00C80637 /* ViewController.swift in Sources */,
 				EC2334DD1F07904B00C80637 /* AppDelegate.swift in Sources */,
 			);
