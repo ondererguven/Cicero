@@ -11,6 +11,7 @@ import UIKit
 class PositionViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var headerView: UIView!
     
     var headerTitle: String!
     var cellHeight: CGFloat!
@@ -19,25 +20,30 @@ class PositionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.separatorColor = UIColor.clear
         
         // set up
         headerTitle = "Entrance"
         cellHeight = self.view.frame.height / 5
-        headerHeight = cellHeight
-        
+        headerView.frame.size.height = cellHeight / 2
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
 
 }
 
+
+// MARK: - Tableview
+
 extension PositionViewController: UITableViewDataSource, UITableViewDelegate {
     
-    // MARK: - Numbers of total cells
+    // MARK: Numbers of total cells
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
     }
     
-    // MARK: - Fill cells
+    // MARK: Fill cells
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let aCell = tableView.dequeueReusableCell(withIdentifier: "positionCell", for: indexPath) as! PositionViewCell
         
@@ -52,19 +58,14 @@ extension PositionViewController: UITableViewDataSource, UITableViewDelegate {
         return aCell
     }
     
-    // MARK: - Fix height
+    // MARK: Fix height
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return cellHeight
     }
     
     
-    // MARK: - Header
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return headerTitle
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return headerHeight
-    }
-    
 }
+
+
+
+
