@@ -53,11 +53,8 @@ extension PositionViewController: UITableViewDataSource, UITableViewDelegate {
         
         aCell.title.text = artPieceDataSource[indexPath.row].title
         aCell.descriptions.text = artPieceDataSource[indexPath.row].descr
-        aCell.photoContainer.image = artPieceDataSource[indexPath.row].image
-        
-        if indexPath.row == 1 {
-            aCell.photo.backgroundColor = .red
-        }
+        aCell.photoContainer.image = artPieceDataSource[indexPath.row].imageContainer
+        aCell.photo.image = artPieceDataSource[indexPath.row].image
         
         return aCell
     }
