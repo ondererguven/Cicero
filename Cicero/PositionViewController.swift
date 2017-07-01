@@ -75,23 +75,19 @@ extension PositionViewController: UITableViewDataSource, UITableViewDelegate {
         
         aCell.title.text = artPieceDataSource[indexPath.row].title
         aCell.descriptions.text = artPieceDataSource[indexPath.row].descr
-        
-        //Luigi: Aggiunta parte di accessibilità
-        aCell.isAccessibilityElement = true
-        aCell.accessibilityLabel = aCell.title.text
-        aCell.accessibilityValue = aCell.descriptions.text
-        
 
         aCell.setIcon(
             iconImage: artPieceDataSource[indexPath.row].image!,
             tintColor: Collection.get.color(forColletionType: collection),
             internalColor: Collection.get.color(forColletionType: collection),
-            isSelected: indexPath.row == LocationManager.shared.currentArtPieceIndex, type: artPieceDataSource[indexPath.row].type
+            isSelected: indexPath.row == LocationManager.shared.currentArtPieceIndex,
+            type: artPieceDataSource[indexPath.row].type
         )
+        
+        
         
         return aCell
     }
-    
     
     // MARK: Fix height
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
