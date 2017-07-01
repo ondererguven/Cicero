@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Collection {
     
@@ -41,3 +42,27 @@ class Collection {
     
     
 }
+
+
+
+
+
+
+// MARK: - tool for getting proper color type
+extension Collection {
+
+    func getColor(forColletionType type: CollectionType) -> UIColor {
+        switch type {
+        case .appartamentiReali:
+            return Palette.colorFor.blue
+        case .armeria:
+            return Palette.colorFor.red
+        case .giardini:
+            return Palette.colorFor.green
+        }
+    }
+    
+}
+
+
+
