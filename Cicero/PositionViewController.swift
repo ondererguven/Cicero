@@ -16,6 +16,7 @@ class PositionViewController: UIViewController {
     var headerTitle: String!
     var cellHeight: CGFloat!
     var headerHeight: CGFloat!
+    var artPieceDataSource: [ArtPiece] = Collection.of.artPiece
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,16 +41,16 @@ extension PositionViewController: UITableViewDataSource, UITableViewDelegate {
     
     // MARK: Numbers of total cells
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return artPieceDataSource.count
     }
     
     // MARK: Fill cells
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let aCell = tableView.dequeueReusableCell(withIdentifier: "positionCell", for: indexPath) as! PositionViewCell
         
-        aCell.title.text = indexPath.section.description
-        aCell.descriptions.text = indexPath.row.description
-        aCell.photoContainer.image = #imageLiteral(resourceName: "node")
+        aCell.title.text = artPieceDataSource[indexPath.row].title
+        aCell.descriptions.text = artPieceDataSource[indexPath.row].descr
+        aCell.photoContainer.image = artPieceDataSource[indexPath.row].image
         
         if indexPath.row == 1 {
             aCell.photo.backgroundColor = .red
