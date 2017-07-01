@@ -10,6 +10,7 @@
 		813E14091F07D83D0044C5B5 /* PositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E14081F07D83D0044C5B5 /* PositionViewController.swift */; };
 		813E140B1F07DBEC0044C5B5 /* PositionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E140A1F07DBEC0044C5B5 /* PositionViewCell.swift */; };
 		813E140D1F07E11E0044C5B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 813E140C1F07E11E0044C5B5 /* Assets.xcassets */; };
+		EC0E40031F07DE9E00FBC624 /* BeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0E40021F07DE9E00FBC624 /* BeaconManager.swift */; };
 		EC2334DD1F07904B00C80637 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2334DC1F07904B00C80637 /* AppDelegate.swift */; };
 		EC2334DF1F07904B00C80637 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2334DE1F07904B00C80637 /* ViewController.swift */; };
 		EC2334E21F07904B00C80637 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2334E01F07904B00C80637 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 		813E14081F07D83D0044C5B5 /* PositionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionViewController.swift; sourceTree = "<group>"; };
 		813E140A1F07DBEC0044C5B5 /* PositionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionViewCell.swift; sourceTree = "<group>"; };
 		813E140C1F07E11E0044C5B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC0E40021F07DE9E00FBC624 /* BeaconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconManager.swift; sourceTree = "<group>"; };
 		EC2334D91F07904B00C80637 /* Cicero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cicero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC2334DC1F07904B00C80637 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC2334DE1F07904B00C80637 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
