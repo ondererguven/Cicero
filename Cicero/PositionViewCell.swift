@@ -42,12 +42,12 @@ class PositionViewCell: UITableViewCell {
             topCircle.image = nil
             bottomCircle.image = #imageLiteral(resourceName: "bottomCircle")
             bottomCircle.image = bottomCircle.image!.withRenderingMode(.alwaysTemplate)
-            bottomCircle.tintColor = .lightGray
+            bottomCircle.tintColor = Palette.colorFor.lightGray
             
         case .middle:
             topCircle.image = #imageLiteral(resourceName: "topCircle")
             topCircle.image = topCircle.image!.withRenderingMode(.alwaysTemplate)
-            topCircle.tintColor = .lightGray
+            topCircle.tintColor = Palette.colorFor.lightGray
             
             bottomCircle.image = #imageLiteral(resourceName: "bottomCircle")
             bottomCircle.image = bottomCircle.image!.withRenderingMode(.alwaysTemplate)
@@ -58,6 +58,8 @@ class PositionViewCell: UITableViewCell {
             topCircle.image = topCircle.image!.withRenderingMode(.alwaysTemplate)
             topCircle.tintColor = tintColor
             bottomCircle.image = nil
+            photoContainer.tintColor = Palette.colorFor.darkGray
+            photo.tintColor = Palette.colorFor.darkGray
             
         case .selected:
             topCircle.image = #imageLiteral(resourceName: "topCircle")
