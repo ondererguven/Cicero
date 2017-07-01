@@ -16,7 +16,7 @@ class PositionViewController: UIViewController {
     var headerTitle: String!
     var cellHeight: CGFloat!
     var headerHeight: CGFloat!
-    var collection: CollectionType = .a
+    var collection: CollectionType = .giardini
     var artPieceDataSource: [ArtPiece]!
     
     override func viewDidLoad() {

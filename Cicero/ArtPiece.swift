@@ -27,5 +27,7 @@ class ArtPiece {
 
 
 enum CollectionType {
-    case a
+    case appartamentiReali
+    case armeria
+    case giardini
 }
