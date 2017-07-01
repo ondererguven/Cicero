@@ -79,7 +79,7 @@ extension PositionViewController: UITableViewDataSource, UITableViewDelegate {
         //Luigi: Aggiunta parte di accessibilità
         aCell.isAccessibilityElement = true
         aCell.accessibilityLabel = aCell.title.text
-        aCell.accessibilityValue = aCell.descriptions.text
+        aCell.accessibilityValue = artPieceDataSource[indexPath.row].voiceOverDescription
         
 
         aCell.setIcon(
