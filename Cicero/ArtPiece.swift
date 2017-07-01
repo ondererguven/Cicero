@@ -25,11 +25,11 @@ class ArtPiece {
         
         switch imageContainer {
         case .start:
-            self.imageContainer = UIImage()
+            self.imageContainer = #imageLiteral(resourceName: "circle")
         case .middle:
-            self.imageContainer = UIImage()
+            self.imageContainer = #imageLiteral(resourceName: "circle")
         case .ending:
-            self.imageContainer = UIImage()
+            self.imageContainer = #imageLiteral(resourceName: "circle")
         }
     }
     
