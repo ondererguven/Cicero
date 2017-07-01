@@ -13,9 +13,10 @@ class PositionViewCell: UITableViewCell {
     @IBOutlet weak var descriptions: UILabel!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var photo: UIImageView!
-    @IBOutlet weak var bottomContainer: UIImageView!
-    @IBOutlet weak var topContainer: UIImageView!
     @IBOutlet weak var photoContainer: UIImageView!
+    @IBOutlet weak var topCircle: UIImageView!
+    @IBOutlet weak var bottomCircle: UIImageView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,14 +39,29 @@ class PositionViewCell: UITableViewCell {
         
         switch type {
         case .start:
-            topContainer.image = nil
-            bottomContainer.image = #imageLiteral(resourceName: "bottomCircle")
+            topCircle.image = nil
+            bottomCircle.image = #imageLiteral(resourceName: "bottomCircle")
+            bottomCircle.image = bottomCircle.image!.withRenderingMode(.alwaysTemplate)
+            bottomCircle.tintColor = .lightGray
+            
         case .middle:
-            topContainer.image = #imageLiteral(resourceName: "topCircle")
-            bottomContainer.image = #imageLiteral(resourceName: "bottomCircle")
+            topCircle.image = #imageLiteral(resourceName: "topCircle")
+            topCircle.image = topCircle.image!.withRenderingMode(.alwaysTemplate)
+            topCircle.tintColor = .lightGray
+            
+            bottomCircle.image = #imageLiteral(resourceName: "bottomCircle")
+            bottomCircle.image = bottomCircle.image!.withRenderingMode(.alwaysTemplate)
+            bottomCircle.tintColor = tintColor
+            
         case .ending:
-            topContainer.image = #imageLiteral(resourceName: "topCircle")
-            bottomContainer.image = nil
+            topCircle.image = #imageLiteral(resourceName: "topCircle")
+            topCircle.image = topCircle.image!.withRenderingMode(.alwaysTemplate)
+            topCircle.tintColor = tintColor
+            bottomCircle.image = nil
+            
+        case .selected:
+            topCircle.image = #imageLiteral(resourceName: "topCircle")
+            bottomCircle.image = #imageLiteral(resourceName: "bottomCircle")
         }
         
     }

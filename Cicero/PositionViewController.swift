@@ -86,12 +86,14 @@ extension PositionViewController: UITableViewDataSource, UITableViewDelegate {
             iconImage: artPieceDataSource[indexPath.row].image!,
             tintColor: Collection.get.color(forColletionType: collection),
             internalColor: Collection.get.color(forColletionType: collection),
-            isSelected: indexPath.row == LocationManager.shared.currentArtPieceIndex, type: artPieceDataSource[indexPath.row].type
+            isSelected: indexPath.row == LocationManager.shared.currentArtPieceIndex,
+            type: artPieceDataSource[indexPath.row].type
         )
+        
+        
         
         return aCell
     }
-    
     
     // MARK: Fix height
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

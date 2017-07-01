@@ -41,18 +41,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         switch region.identifier {
         case RegionIdentifier.Garden.rawValue:
-            title = "Welcome to Capodimonte!"
-            body = "Click on the notification to start your tour"
+            title = "Benvenuto a Capodimonte!"
+            body = "Benvenuto nei giardini del Real Bosco di Capodimonte. Clicca sulla notifica per cominciare il tuo tour!"
             identifier = "gardenNotification"
             LocationManager.shared.collectionAtCurrentLocation = CollectionType(rawValue: CollectionType.giardini.rawValue)
         case RegionIdentifier.Armory.rawValue:
-            title = "You have entered the armory"
-            body = "Listen to the information"
+            title = "Sei entrato nell'Armeria"
+            body = "Clicca sulla notifica per cominciare il tuo tour!"
             identifier = "armoryNotification"
             LocationManager.shared.collectionAtCurrentLocation = CollectionType(rawValue: CollectionType.armeria.rawValue)
         case RegionIdentifier.Apartment.rawValue:
-            title = "You have entered Apartment"
-            body = "Listen to the information"
+            title = "Sei entrato negli appartamenti reali"
+            body = "Clicca sulla notifica per cominciare il tuo tour!"
             identifier = "artNotification"
             LocationManager.shared.collectionAtCurrentLocation = CollectionType(rawValue: CollectionType.appartamentiReali.rawValue)
         default:
@@ -68,7 +68,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "position")
+        let vc = storyboard.instantiateViewController(withIdentifier: "main")
         
         self.window?.rootViewController = vc
         

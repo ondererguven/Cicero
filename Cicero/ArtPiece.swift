@@ -23,7 +23,6 @@ class ArtPiece {
         self.descr = descr
         self.voiceOverDescription = voiceOver
         self.type = imageContainer
-        
     }
     
 }
@@ -39,4 +38,5 @@ enum ContainerType {
     case start
     case middle
     case ending
+    case selected
 }
