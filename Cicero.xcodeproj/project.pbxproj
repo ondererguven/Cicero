@@ -14,6 +14,10 @@
 		813E141A1F07FF9B0044C5B5 /* ArtPieceCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E14191F07FF9B0044C5B5 /* ArtPieceCollection.swift */; };
 		813E141C1F082C350044C5B5 /* AVManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E141B1F082C350044C5B5 /* AVManager.swift */; };
 		813E141E1F0835540044C5B5 /* DesignTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E141D1F0835540044C5B5 /* DesignTool.swift */; };
+		813E14211F0857FB0044C5B5 /* appartamentiReali.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 813E14201F0857FB0044C5B5 /* appartamentiReali.mp3 */; };
+		813E14241F085D8C0044C5B5 /* armeria1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 813E14221F085D8C0044C5B5 /* armeria1.mp3 */; };
+		813E14251F085D8C0044C5B5 /* armeria2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 813E14231F085D8C0044C5B5 /* armeria2.mp3 */; };
+		813E14271F085DA30044C5B5 /* giardini.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 813E14261F085DA30044C5B5 /* giardini.mp3 */; };
 		EC0E40031F07DE9E00FBC624 /* BeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0E40021F07DE9E00FBC624 /* BeaconManager.swift */; };
 		EC2334DD1F07904B00C80637 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2334DC1F07904B00C80637 /* AppDelegate.swift */; };
 		EC2334DF1F07904B00C80637 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2334DE1F07904B00C80637 /* ViewController.swift */; };
@@ -31,6 +35,10 @@
 		813E14191F07FF9B0044C5B5 /* ArtPieceCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtPieceCollection.swift; sourceTree = "<group>"; };
 		813E141B1F082C350044C5B5 /* AVManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVManager.swift; sourceTree = "<group>"; };
 		813E141D1F0835540044C5B5 /* DesignTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignTool.swift; sourceTree = "<group>"; };
+		813E14201F0857FB0044C5B5 /* appartamentiReali.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = appartamentiReali.mp3; sourceTree = "<group>"; };
+		813E14221F085D8C0044C5B5 /* armeria1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = armeria1.mp3; sourceTree = "<group>"; };
+		813E14231F085D8C0044C5B5 /* armeria2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = armeria2.mp3; sourceTree = "<group>"; };
+		813E14261F085DA30044C5B5 /* giardini.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = giardini.mp3; sourceTree = "<group>"; };
 		EC0E40021F07DE9E00FBC624 /* BeaconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconManager.swift; sourceTree = "<group>"; };
 		EC2334D91F07904B00C80637 /* Cicero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cicero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC2334DC1F07904B00C80637 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +61,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		813E141F1F0857CE0044C5B5 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				813E14201F0857FB0044C5B5 /* appartamentiReali.mp3 */,
+				813E14261F085DA30044C5B5 /* giardini.mp3 */,
+				813E14221F085D8C0044C5B5 /* armeria1.mp3 */,
+				813E14231F085D8C0044C5B5 /* armeria2.mp3 */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
 		EC2334D01F07904B00C80637 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +95,7 @@
 				EC2334EE1F07963A00C80637 /* Model */,
 				EC2334EF1F07964700C80637 /* View */,
 				EC2334F01F07964D00C80637 /* Controller */,
+				813E141F1F0857CE0044C5B5 /* Sounds */,
 				EC2334DC1F07904B00C80637 /* AppDelegate.swift */,
 				EC2334E81F07904B00C80637 /* Info.plist */,
 			);
@@ -184,8 +204,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC2334E71F07904B00C80637 /* LaunchScreen.storyboard in Resources */,
+				813E14271F085DA30044C5B5 /* giardini.mp3 in Resources */,
 				813E140D1F07E11E0044C5B5 /* Assets.xcassets in Resources */,
+				813E14241F085D8C0044C5B5 /* armeria1.mp3 in Resources */,
+				813E14211F0857FB0044C5B5 /* appartamentiReali.mp3 in Resources */,
 				EC2334E21F07904B00C80637 /* Main.storyboard in Resources */,
+				813E14251F085D8C0044C5B5 /* armeria2.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
