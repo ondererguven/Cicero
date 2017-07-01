@@ -11,7 +11,24 @@ import AVFoundation
 
 class Media {
     
-    let player = AVPlayer()
+    static let librery = Media()
+    
+    var player: AVAudioPlayer?
+    
+    func play(fileName: String) -> AVAudioPlayer? {
+        let path = Bundle.main.path(forResource: fileName, ofType: "mp3")!
+        let sound = URL(fileURLWithPath: path)
+        
+        player = try? AVAudioPlayer(contentsOf: sound)
+        
+        if let player = player {
+            player.prepareToPlay()
+            player.play()
+        }
+        
+        return player
+        
+    }
     
     
     
