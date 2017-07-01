@@ -14,8 +14,6 @@ import CoreLocation
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, CLLocationManagerDelegate {
 
     var window: UIWindow?
-
-    let locationManager = CLLocationManager()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -25,12 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             }
         }
         
-        locationManager.requestAlwaysAuthorization()
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
         for region in BeaconManager.shared.getRegions() {
-            locationManager.startMonitoring(for: region)
+            LocationManager.shared.startMonitoring(for: region)
         }
-        locationManager.delegate = self
+        LocationManager.shared.delegate = self
         
         UNUserNotificationCenter.current().delegate = self
         

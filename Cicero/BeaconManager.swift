@@ -17,6 +17,7 @@ enum RegionIdentifier: String {
 let beaconUUID = "B9407F30-F5F8-466E-AFF9-25556B57FE6D"
 
 class BeaconManager {
+    
     static let shared = BeaconManager()
     
     private var gardenRegion: CLBeaconRegion

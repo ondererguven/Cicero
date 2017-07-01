@@ -14,6 +14,7 @@
 		EC2334E41F07904B00C80637 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC2334E31F07904B00C80637 /* Assets.xcassets */; };
 		EC2334E71F07904B00C80637 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2334E51F07904B00C80637 /* LaunchScreen.storyboard */; };
 		EC2334F31F07A06A00C80637 /* UserNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2334F21F07A06A00C80637 /* UserNotificationHelper.swift */; };
+		EC72E17A1F07E30E0064068B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC72E1791F07E30E0064068B /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		EC2334E61F07904B00C80637 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC2334E81F07904B00C80637 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC2334F21F07A06A00C80637 /* UserNotificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNotificationHelper.swift; sourceTree = "<group>"; };
+		EC72E1791F07E30E0064068B /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				EC2334F21F07A06A00C80637 /* UserNotificationHelper.swift */,
 				EC0E40021F07DE9E00FBC624 /* BeaconManager.swift */,
+				EC72E1791F07E30E0064068B /* LocationManager.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 			files = (
 				EC2334F31F07A06A00C80637 /* UserNotificationHelper.swift in Sources */,
 				EC0E40031F07DE9E00FBC624 /* BeaconManager.swift in Sources */,
+				EC72E17A1F07E30E0064068B /* LocationManager.swift in Sources */,
 				EC2334DF1F07904B00C80637 /* ViewController.swift in Sources */,
 				EC2334DD1F07904B00C80637 /* AppDelegate.swift in Sources */,
 			);
