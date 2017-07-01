@@ -69,6 +69,9 @@
 		EC2334EE1F07963A00C80637 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EC2334DC1F07904B00C80637 /* AppDelegate.swift */,
+				EC2334E31F07904B00C80637 /* Assets.xcassets */,
+				EC2334E81F07904B00C80637 /* Info.plist */,
 			);
 			name = Model;
 			sourceTree = "<group>";
