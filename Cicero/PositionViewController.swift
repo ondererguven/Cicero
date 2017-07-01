@@ -54,7 +54,13 @@ extension PositionViewController: UITableViewDataSource, UITableViewDelegate {
         aCell.title.text = artPieceDataSource[indexPath.row].title
         aCell.descriptions.text = artPieceDataSource[indexPath.row].descr
         aCell.photoContainer.image = artPieceDataSource[indexPath.row].imageContainer
+        aCell.photoContainer.image = aCell.photoContainer.image!.withRenderingMode(.alwaysTemplate)
         aCell.photo.image = artPieceDataSource[indexPath.row].image
+        aCell.photo.image = aCell.photo.image!.withRenderingMode(.alwaysTemplate)
+//        let color = UIColor.init(red: 168/255, green: 37/255, blue: 63/255, alpha: 1)
+        let color = UIColor.init(red: 63/255, green: 83/255, blue: 188/255, alpha: 1)
+        aCell.photo.tintColor = color
+        aCell.photoContainer.tintColor = color
         
         
         return aCell
