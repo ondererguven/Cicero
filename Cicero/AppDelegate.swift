@@ -10,21 +10,11 @@ import UIKit
 import UserNotifications
 import CoreLocation
 
-enum NotificationName: String {
-    case Museum = "museum"
-    case Garden = "garden"
-    case Art = "art"
-}
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, CLLocationManagerDelegate {
 
     var window: UIWindow?
-
-    let locationManager = CLLocationManager()
     
-    let gardenRegion = CLBeaconRegion(proximityUUID: UUID(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, major: 37447, minor: 29234, identifier: "gardenRegion")
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) {(accepted, error) in
@@ -33,9 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             }
         }
         
-        locationManager.requestAlwaysAuthorization()
-        locationManager.startMonitoring(for: gardenRegion)
-        locationManager.delegate = self
+        for region in BeaconManager.shared.getRegions() {
+            LocationManager.shared.startMonitoring(for: region)
+        }
+        LocationManager.shared.delegate = self
         
         UNUserNotificationCenter.current().delegate = self
         
@@ -44,25 +35,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
         print("you entered \(region)")
+        var title: String
+        var body: String
+        var identifier: String
         
-        UserNotificationHelper.shared.createNotification(title: "Welcome to Capodimonte", body: "Click on the notification to start your tour", identifier: "gardenNotification")
-        
+        switch region.identifier {
+        case RegionIdentifier.Garden.rawValue:
+            title = "Welcome to Capodimonte!"
+            body = "Click on the notification to start your tour"
+            identifier = "gardenNotification"
+        case RegionIdentifier.Museum.rawValue:
+            title = "You have entered the museum"
+            body = "Listen to the instructions about navigation"
+            identifier = "museumNotification"
+        case RegionIdentifier.Art.rawValue:
+            title = "Art Name"
+            body = "Listen to the information"
+            identifier = "artNotification"
+        default:
+            return
+        }
+        UserNotificationHelper.shared.createNotification(title: title, body: body, identifier: identifier)
     }
     
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
         print("you exited \(region)")
-        
-        let notification = Notification(name: Notification.Name(NotificationName.Museum.rawValue))
-        NotificationCenter.default.post(notification)
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let vc = storyboard.instantiateViewController(withIdentifier: "")
-//        
-//        if let rootVC = self.window?.rootViewController! as? UINavigationController {
-//            rootVC.pushViewController(vc, animated: true)
-//        }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "main")
+        
+        self.window?.rootViewController = vc
         
         completionHandler()
     }
