@@ -37,12 +37,12 @@ class Collection {
         ]
         
         artPiece[.giardini] = [
-            ArtPiece(image: #imageLiteral(resourceName: "scale"), imageContainer: .start, title: "Uscita", descr: "G1", voiceOver: "Ti trovi all’uscita secondaria del Museo del Bosco di Capodimonte. Continuando a camminare potrai incontrare il prossimo suggerimento che ti porterà alla scoperta del Bosco."),
-            ArtPiece(image: #imageLiteral(resourceName: "inizio"), imageContainer: .middleTop, title: "Inizio Percorso", descr: "G2", voiceOver: "Ti trovi all’inizio del percorso reale del Bosco di Capodimonte. Ai lati del percorso è possibile riposarsi sulle panchine, mentre continuando lungo il percorso ti inoltrerai nella natura incontaminata."),
-            ArtPiece(image: #imageLiteral(resourceName: "giardino"), imageContainer: .middleTop, title: "Giardino", descr: "G4", voiceOver: "Ti sei appena inoltrato nel percorso guidato lungo il giardino del Bosco."),
-            ArtPiece(image: #imageLiteral(resourceName: "giardino"), imageContainer: .middleTop, title: "Giardino", descr: "G5", voiceOver: "Ti sei appena inoltrato nel percorso guidato lungo il giardino del Bosco."),
-            ArtPiece(image: #imageLiteral(resourceName: "giardino"), imageContainer: .selected, title: "Giardino", descr: "G6", voiceOver: "Ti sei appena inoltrato nel percorso guidato lungo il giardino del Bosco."),
-            ArtPiece(image: #imageLiteral(resourceName: "giardino"), imageContainer: .ending, title: "Fine Percorso", descr: "G7", voiceOver: "Ti sei appena inoltrato nel percorso guidato lungo il giardino del Bosco. Le numerose palme che si ergono davanti Porta grande e intorno al Palazzo reale, sono state impiantate dal tardo Ottocento e in particolare quando i Duchi d’Aosta abitarono stabilmente nella Reggia.")
+            ArtPiece(image: #imageLiteral(resourceName: "scale"), imageContainer: .start, title: "Uscita", descr: "Uscita Secondaria", voiceOver: "Ti trovi all’uscita secondaria del Museo del Bosco di Capodimonte. Continuando a camminare potrai incontrare il prossimo suggerimento che ti porterà alla scoperta del Bosco."),
+            ArtPiece(image: #imageLiteral(resourceName: "inizio"), imageContainer: .middleTop, title: "Inizio Percorso", descr: "Percorso Reale", voiceOver: "Ti trovi all’inizio del percorso reale del Bosco di Capodimonte. Ai lati del percorso è possibile riposarsi sulle panchine, mentre continuando lungo il percorso ti inoltrerai nella natura incontaminata."),
+            ArtPiece(image: #imageLiteral(resourceName: "giardino"), imageContainer: .middleTop, title: "Giardino", descr: "Percorso Guidato", voiceOver: "Ti sei appena inoltrato nel percorso guidato lungo il giardino del Bosco."),
+            ArtPiece(image: #imageLiteral(resourceName: "giardino"), imageContainer: .middleTop, title: "Giardino", descr: "Percorso Guidato", voiceOver: "Ti sei appena inoltrato nel percorso guidato lungo il giardino del Bosco."),
+            ArtPiece(image: #imageLiteral(resourceName: "giardino"), imageContainer: .selected, title: "Giardino", descr: "Percorso Guidato", voiceOver: "Ti sei appena inoltrato nel percorso guidato lungo il giardino del Bosco."),
+            ArtPiece(image: #imageLiteral(resourceName: "giardino"), imageContainer: .ending, title: "Fine Percorso", descr: "Porta Grande", voiceOver: "Ti sei appena inoltrato nel percorso guidato lungo il giardino del Bosco. Le numerose palme che si ergono davanti Porta grande e intorno al Palazzo reale, sono state impiantate dal tardo Ottocento e in particolare quando i Duchi d’Aosta abitarono stabilmente nella Reggia.")
         ]
         
     }
