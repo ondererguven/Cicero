@@ -15,7 +15,7 @@ class PositionViewController: UIViewController {
     @IBOutlet weak var headerTitle: UILabel!
     @IBOutlet weak var phoneButton: UIButton!
     
-    @IBOutlet weak var mapButton: NSLayoutConstraint!
+    @IBOutlet var mapButton: UIButton!
 
     
     var cellHeight: CGFloat!
