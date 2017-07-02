@@ -24,15 +24,6 @@ class PositionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        switch collection {
-        case .appartamentiReali:
-            _ = Media.librery.play(fileName: "Royal")
-        case .armeria:
-            _ = Media.librery.play(fileName: "Armery")
-        case .giardini:
-            _ = Media.librery.play(fileName: "Garden")
-        }
-        
         // load data
         artPieceDataSource = Collection.of.artPiece[collection]
         
@@ -71,11 +62,15 @@ class PositionViewController: UIViewController {
             switch userLocation {
             case .appartamentiReali:
                 LocationManager.shared.currentArtPieceIndex = 0
+                _ = Media.librery.play(fileName: "Royal")
             case .armeria:
                 LocationManager.shared.currentArtPieceIndex = 1
+                _ = Media.librery.play(fileName: "Armery")
             case .giardini:
                 LocationManager.shared.currentArtPieceIndex = 2
+                _ = Media.librery.play(fileName: "Garden")
             }
+            
             tableView.reloadData()
         }
     }
