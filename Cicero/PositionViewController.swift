@@ -100,7 +100,7 @@ class PositionViewController: UIViewController {
             tableView.reloadData()
             
             let selectedCell = tableView.cellForRow(at: IndexPath(row: LocationManager.shared.currentArtPieceIndex, section: 0)) as! PositionViewCell
-            UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, selectedCell.accessibilityValue)
+            UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, selectedCell)
         }
     }
 
