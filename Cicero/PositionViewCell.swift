@@ -84,21 +84,25 @@ class PositionViewCell: UITableViewCell {
         }
         
         if isPrevius {
-            topCircle.image = #imageLiteral(resourceName: "topCircle")
-            topCircle.image = topCircle.image!.withRenderingMode(.alwaysTemplate)
-            topCircle.tintColor = Palette.colorFor.lightGray
-            
-            bottomCircle.image = #imageLiteral(resourceName: "bottomCircle")
-            bottomCircle.image = bottomCircle.image!.withRenderingMode(.alwaysTemplate)
-            bottomCircle.tintColor = Palette.colorFor.lightGray
+            if type != .start && type != .ending {
+                topCircle.image = #imageLiteral(resourceName: "topCircle")
+                topCircle.image = topCircle.image!.withRenderingMode(.alwaysTemplate)
+                topCircle.tintColor = Palette.colorFor.lightGray
+                
+                bottomCircle.image = #imageLiteral(resourceName: "bottomCircle")
+                bottomCircle.image = bottomCircle.image!.withRenderingMode(.alwaysTemplate)
+                bottomCircle.tintColor = Palette.colorFor.lightGray
+            }
         }else if isNext {
-            topCircle.image = #imageLiteral(resourceName: "topCircle")
-            topCircle.image = topCircle.image!.withRenderingMode(.alwaysTemplate)
-            topCircle.tintColor = internalColor
-            
-            bottomCircle.image = #imageLiteral(resourceName: "bottomCircle")
-            bottomCircle.image = bottomCircle.image!.withRenderingMode(.alwaysTemplate)
-            bottomCircle.tintColor = internalColor
+            if type != .start && type != .ending {
+                topCircle.image = #imageLiteral(resourceName: "topCircle")
+                topCircle.image = topCircle.image!.withRenderingMode(.alwaysTemplate)
+                topCircle.tintColor = internalColor
+                
+                bottomCircle.image = #imageLiteral(resourceName: "bottomCircle")
+                bottomCircle.image = bottomCircle.image!.withRenderingMode(.alwaysTemplate)
+                bottomCircle.tintColor = internalColor
+            }
         } else if isSelected {
             topCircle.image = #imageLiteral(resourceName: "topCircle")
             topCircle.image = topCircle.image!.withRenderingMode(.alwaysTemplate)
