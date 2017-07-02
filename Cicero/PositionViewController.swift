@@ -13,10 +13,8 @@ class PositionViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var headerTitle: UILabel!
-    
-    @IBOutlet weak var foodButton: UIButton!
-    
-    @IBOutlet weak var bathButton: UIButton!
+    @IBOutlet weak var phoneButton: UIButton!
+
     
     var cellHeight: CGFloat!
     var headerHeight: CGFloat!
@@ -73,6 +71,10 @@ class PositionViewController: UIViewController {
         }
     }
 
+    @IBAction func callToMuseum(_ sender: Any) {
+        guard let number = URL(string: "tel://0817499111") else { return }
+        UIApplication.shared.open(number)
+    }
 }
 
 
