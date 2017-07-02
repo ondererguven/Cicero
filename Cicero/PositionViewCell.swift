@@ -104,13 +104,28 @@ class PositionViewCell: UITableViewCell {
                 bottomCircle.tintColor = internalColor
             }
         } else if isSelected {
-            topCircle.image = #imageLiteral(resourceName: "topCircle")
-            topCircle.image = topCircle.image!.withRenderingMode(.alwaysTemplate)
-            topCircle.tintColor = Palette.colorFor.lightGray
-            
-            bottomCircle.image = #imageLiteral(resourceName: "bottomCircle")
-            bottomCircle.image = bottomCircle.image!.withRenderingMode(.alwaysTemplate)
-            bottomCircle.tintColor = internalColor
+            if type != .start && type != .ending {
+                topCircle.image = #imageLiteral(resourceName: "topCircle")
+                topCircle.image = topCircle.image!.withRenderingMode(.alwaysTemplate)
+                topCircle.tintColor = Palette.colorFor.lightGray
+                
+                bottomCircle.image = #imageLiteral(resourceName: "bottomCircle")
+                bottomCircle.image = bottomCircle.image!.withRenderingMode(.alwaysTemplate)
+                bottomCircle.tintColor = internalColor
+            } else if type == .start {
+                topCircle.image = nil
+                
+                bottomCircle.image = #imageLiteral(resourceName: "bottomCircle")
+                bottomCircle.image = bottomCircle.image!.withRenderingMode(.alwaysTemplate)
+                bottomCircle.tintColor = internalColor
+            } else {
+                topCircle.image = #imageLiteral(resourceName: "topCircle")
+                topCircle.image = topCircle.image!.withRenderingMode(.alwaysTemplate)
+                topCircle.tintColor = Palette.colorFor.lightGray
+                
+                bottomCircle.image = nil
+                
+            }
         }
         
     }
