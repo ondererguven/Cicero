@@ -29,6 +29,8 @@ class PositionViewCell: UITableViewCell {
     }
     
     func setIcon(iconImage: UIImage, tintColor: UIColor, internalColor: UIColor, isSelected: Bool, type: ContainerType) {
+        
+        descriptions.tintColor = Palette.colorFor.lightGray
         photo.image = iconImage
         photo.image = photo.image!.withRenderingMode(.alwaysTemplate)
         photo.tintColor = isSelected ? .white : tintColor
@@ -36,6 +38,10 @@ class PositionViewCell: UITableViewCell {
         photoContainer.image = isSelected ? #imageLiteral(resourceName: "circleFull") : #imageLiteral(resourceName: "circle")
         photoContainer.image = photoContainer.image!.withRenderingMode(.alwaysTemplate)
         photoContainer.tintColor = internalColor
+        
+        if isSelected {
+            title.textColor = internalColor
+        }
         
         switch type {
         case .start:
