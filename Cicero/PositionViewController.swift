@@ -14,6 +14,10 @@ class PositionViewController: UIViewController {
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var headerTitle: UILabel!
     
+    @IBOutlet weak var foodButton: UIButton!
+    
+    @IBOutlet weak var bathButton: UIButton!
+    
     var cellHeight: CGFloat!
     var headerHeight: CGFloat!
     var collection: CollectionType = LocationManager.shared.collectionAtCurrentLocation
@@ -30,6 +34,18 @@ class PositionViewController: UIViewController {
         headerView.backgroundColor = Collection.get.color(forColletionType: collection)
         cellHeight = self.view.frame.height / 5
         headerView.frame.size.height = cellHeight * 2 / 3
+        
+        //Luigi: Aggiunta parte di accessibilità
+        bathButton.isAccessibilityElement = true
+        bathButton.accessibilityLabel = "Posizione Bagni"
+        bathButton.accessibilityTraits = UIAccessibilityTraitButton
+        bathButton.accessibilityValue = "Per arrivare ai bagni procedi in fondo a destra"
+        
+        //Luigi: Aggiunta parte di accessibilità
+        foodButton.isAccessibilityElement = true
+        foodButton.accessibilityLabel = "Posizione Ristorazione"
+        foodButton.accessibilityTraits = UIAccessibilityTraitButton
+        foodButton.accessibilityValue = "Per arrivare alla ristorazione procedi in fondo a sinistra"
     }
     
     override func viewWillAppear(_ animated: Bool) {
