@@ -36,7 +36,8 @@ enum CollectionType: String {
 
 enum ContainerType {
     case start
-    case middle
-    case ending
+    case middleTop
     case selected
+    case middleBottom
+    case ending
 }
