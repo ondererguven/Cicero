@@ -40,12 +40,15 @@ class PositionViewCell: UITableViewCell {
         photoContainer.image = photoContainer.image!.withRenderingMode(.alwaysTemplate)
         photoContainer.tintColor = internalColor
         
+        puntatore.image = nil
+        
         switch type {
         case .start:
             topCircle.image = nil
             bottomCircle.image = #imageLiteral(resourceName: "bottomCircle")
             bottomCircle.image = bottomCircle.image!.withRenderingMode(.alwaysTemplate)
             bottomCircle.tintColor = Palette.colorFor.lightGray
+            
             
         case .ending:
             topCircle.image = #imageLiteral(resourceName: "topCircle")
@@ -56,9 +59,9 @@ class PositionViewCell: UITableViewCell {
             photoContainer.tintColor = Palette.colorFor.darkGray
             photo.tintColor = Palette.colorFor.darkGray
             
+            
         default:
-            puntatore.image = nil
-
+            break
         }
         
         if isPrevius {
