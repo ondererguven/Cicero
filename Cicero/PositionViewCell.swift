@@ -46,24 +46,6 @@ class PositionViewCell: UITableViewCell {
             bottomCircle.image = bottomCircle.image!.withRenderingMode(.alwaysTemplate)
             bottomCircle.tintColor = Palette.colorFor.lightGray
             
-        case .middleTop:
-            topCircle.image = #imageLiteral(resourceName: "topCircle")
-            topCircle.image = topCircle.image!.withRenderingMode(.alwaysTemplate)
-            topCircle.tintColor = Palette.colorFor.lightGray
-            
-            bottomCircle.image = #imageLiteral(resourceName: "bottomCircle")
-            bottomCircle.image = bottomCircle.image!.withRenderingMode(.alwaysTemplate)
-            bottomCircle.tintColor = Palette.colorFor.lightGray
-            
-        case .middleBottom:
-            topCircle.image = #imageLiteral(resourceName: "topCircle")
-            topCircle.image = topCircle.image!.withRenderingMode(.alwaysTemplate)
-            topCircle.tintColor = internalColor
-            
-            bottomCircle.image = #imageLiteral(resourceName: "bottomCircle")
-            bottomCircle.image = bottomCircle.image!.withRenderingMode(.alwaysTemplate)
-            bottomCircle.tintColor = internalColor
-            
         case .ending:
             topCircle.image = #imageLiteral(resourceName: "topCircle")
             topCircle.image = topCircle.image!.withRenderingMode(.alwaysTemplate)
@@ -73,14 +55,9 @@ class PositionViewCell: UITableViewCell {
             photoContainer.tintColor = Palette.colorFor.darkGray
             photo.tintColor = Palette.colorFor.darkGray
             
-        case .selected:
-            topCircle.image = #imageLiteral(resourceName: "topCircle")
-            topCircle.image = topCircle.image!.withRenderingMode(.alwaysTemplate)
-            topCircle.tintColor = Palette.colorFor.lightGray
-            
-            bottomCircle.image = #imageLiteral(resourceName: "bottomCircle")
-            bottomCircle.image = bottomCircle.image!.withRenderingMode(.alwaysTemplate)
-            bottomCircle.tintColor = internalColor
+        default:
+            break
+
         }
         
         if isPrevius {
