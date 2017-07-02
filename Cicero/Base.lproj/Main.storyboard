@@ -174,6 +174,9 @@ Capodimonte</string>
                                                     <color key="textColor" red="0.78823529411764703" green="0.78823529411764703" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U6t-93-Nun" userLabel="puntatore">
+                                                    <rect key="frame" x="0.0" y="60" width="20" height="40.5"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="h4s-Ky-uhA" firstAttribute="height" secondItem="e4T-kB-9vB" secondAttribute="height" multiplier="1:4" id="0M6-rF-Jv0"/>
@@ -186,11 +189,14 @@ Capodimonte</string>
                                                 <constraint firstItem="e4T-kB-9vB" firstAttribute="top" secondItem="sHn-Qu-6rp" secondAttribute="topMargin" constant="-8" id="LgV-am-7SC"/>
                                                 <constraint firstItem="e4T-kB-9vB" firstAttribute="height" secondItem="sHn-Qu-6rp" secondAttribute="height" id="Qep-fe-7FU"/>
                                                 <constraint firstItem="xFN-hP-1ka" firstAttribute="height" secondItem="e4T-kB-9vB" secondAttribute="height" id="Qp6-7l-gDL"/>
+                                                <constraint firstItem="U6t-93-Nun" firstAttribute="height" secondItem="h4s-Ky-uhA" secondAttribute="height" id="RNB-d1-OKs"/>
+                                                <constraint firstItem="U6t-93-Nun" firstAttribute="centerY" secondItem="h4s-Ky-uhA" secondAttribute="centerY" id="SSx-2n-jEq"/>
                                                 <constraint firstItem="xFN-hP-1ka" firstAttribute="centerX" secondItem="e4T-kB-9vB" secondAttribute="centerX" id="TBw-g2-aAe"/>
                                                 <constraint firstItem="xFN-hP-1ka" firstAttribute="width" secondItem="e4T-kB-9vB" secondAttribute="width" id="Vos-xq-pgW"/>
                                                 <constraint firstAttribute="leadingMargin" secondItem="e4T-kB-9vB" secondAttribute="leading" id="YxM-hV-QsX"/>
                                                 <constraint firstItem="UwO-f7-B7K" firstAttribute="top" secondItem="Qp2-nv-3kw" secondAttribute="bottom" constant="8" id="dCN-8H-wwg"/>
                                                 <constraint firstItem="h4s-Ky-uhA" firstAttribute="centerX" secondItem="e4T-kB-9vB" secondAttribute="centerX" id="eyf-Q2-I1y"/>
+                                                <constraint firstItem="U6t-93-Nun" firstAttribute="width" secondItem="h4s-Ky-uhA" secondAttribute="width" multiplier="1:2" id="gR0-w0-dwT"/>
                                                 <constraint firstItem="NpQ-Z4-0jM" firstAttribute="height" secondItem="e4T-kB-9vB" secondAttribute="height" id="hrj-hO-EaQ"/>
                                                 <constraint firstItem="xFN-hP-1ka" firstAttribute="centerY" secondItem="e4T-kB-9vB" secondAttribute="centerY" id="jd2-zF-hBl"/>
                                                 <constraint firstItem="NpQ-Z4-0jM" firstAttribute="width" secondItem="e4T-kB-9vB" secondAttribute="width" id="lMG-TA-p2u"/>
@@ -198,11 +204,15 @@ Capodimonte</string>
                                                 <constraint firstItem="NpQ-Z4-0jM" firstAttribute="centerY" secondItem="e4T-kB-9vB" secondAttribute="centerY" id="tgr-ZS-a46"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="U6t-93-Nun" firstAttribute="leading" secondItem="bRp-AA-nv7" secondAttribute="leading" id="Xo5-bc-Vok"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="bottomCircle" destination="NpQ-Z4-0jM" id="JCY-MT-feR"/>
                                             <outlet property="descriptions" destination="UwO-f7-B7K" id="zMB-bQ-IIO"/>
                                             <outlet property="photo" destination="h4s-Ky-uhA" id="p8b-45-KbE"/>
                                             <outlet property="photoContainer" destination="e4T-kB-9vB" id="fTb-Sh-ALC"/>
+                                            <outlet property="puntatore" destination="U6t-93-Nun" id="Dxv-t2-cuT"/>
                                             <outlet property="title" destination="Qp2-nv-3kw" id="7DB-gi-HQl"/>
                                             <outlet property="topCircle" destination="xFN-hP-1ka" id="AD8-vJ-fz0"/>
                                         </connections>

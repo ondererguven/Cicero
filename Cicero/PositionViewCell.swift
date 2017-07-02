@@ -16,6 +16,7 @@ class PositionViewCell: UITableViewCell {
     @IBOutlet weak var photoContainer: UIImageView!
     @IBOutlet weak var topCircle: UIImageView!
     @IBOutlet weak var bottomCircle: UIImageView!
+    @IBOutlet weak var puntatore: UIImageView!
     
     
     override func awakeFromNib() {
@@ -56,7 +57,7 @@ class PositionViewCell: UITableViewCell {
             photo.tintColor = Palette.colorFor.darkGray
             
         default:
-            break
+            puntatore.image = nil
 
         }
         
@@ -106,6 +107,10 @@ class PositionViewCell: UITableViewCell {
             photoContainer.image = #imageLiteral(resourceName: "circleBigFull")
             photoContainer.image = photoContainer.image!.withRenderingMode(.alwaysTemplate)
             photoContainer.tintColor = internalColor
+            
+            puntatore.image = #imageLiteral(resourceName: "puntatore")
+            puntatore.image = puntatore.image!.withRenderingMode(.alwaysTemplate)
+            puntatore.tintColor = internalColor
         }
         
     }
