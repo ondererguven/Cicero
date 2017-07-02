@@ -101,7 +101,9 @@ extension PositionViewController: UITableViewDataSource, UITableViewDelegate {
             tintColor: Collection.get.color(forColletionType: collection),
             internalColor: Collection.get.color(forColletionType: collection),
             isSelected: indexPath.row == LocationManager.shared.currentArtPieceIndex,
-            type: piece.type
+            type: piece.type,
+            isPrevius: indexPath.row < LocationManager.shared.currentArtPieceIndex,
+            isNext: indexPath.row > LocationManager.shared.currentArtPieceIndex
         )
         
         

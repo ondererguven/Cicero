@@ -28,7 +28,7 @@ class PositionViewCell: UITableViewCell {
         
     }
     
-    func setIcon(iconImage: UIImage, tintColor: UIColor, internalColor: UIColor, isSelected: Bool, type: ContainerType) {
+    func setIcon(iconImage: UIImage, tintColor: UIColor, internalColor: UIColor, isSelected: Bool, type: ContainerType, isPrevius: Bool, isNext: Bool) {
         
         descriptions.tintColor = Palette.colorFor.lightGray
         photo.image = iconImage
@@ -74,6 +74,32 @@ class PositionViewCell: UITableViewCell {
             photo.tintColor = Palette.colorFor.darkGray
             
         case .selected:
+            topCircle.image = #imageLiteral(resourceName: "topCircle")
+            topCircle.image = topCircle.image!.withRenderingMode(.alwaysTemplate)
+            topCircle.tintColor = Palette.colorFor.lightGray
+            
+            bottomCircle.image = #imageLiteral(resourceName: "bottomCircle")
+            bottomCircle.image = bottomCircle.image!.withRenderingMode(.alwaysTemplate)
+            bottomCircle.tintColor = internalColor
+        }
+        
+        if isPrevius {
+            topCircle.image = #imageLiteral(resourceName: "topCircle")
+            topCircle.image = topCircle.image!.withRenderingMode(.alwaysTemplate)
+            topCircle.tintColor = Palette.colorFor.lightGray
+            
+            bottomCircle.image = #imageLiteral(resourceName: "bottomCircle")
+            bottomCircle.image = bottomCircle.image!.withRenderingMode(.alwaysTemplate)
+            bottomCircle.tintColor = Palette.colorFor.lightGray
+        }else if isNext {
+            topCircle.image = #imageLiteral(resourceName: "topCircle")
+            topCircle.image = topCircle.image!.withRenderingMode(.alwaysTemplate)
+            topCircle.tintColor = internalColor
+            
+            bottomCircle.image = #imageLiteral(resourceName: "bottomCircle")
+            bottomCircle.image = bottomCircle.image!.withRenderingMode(.alwaysTemplate)
+            bottomCircle.tintColor = internalColor
+        } else if isSelected {
             topCircle.image = #imageLiteral(resourceName: "topCircle")
             topCircle.image = topCircle.image!.withRenderingMode(.alwaysTemplate)
             topCircle.tintColor = Palette.colorFor.lightGray
