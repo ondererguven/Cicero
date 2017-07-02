@@ -53,6 +53,8 @@ class PositionViewController: UIViewController {
             let userLocation = info["location"] as! CollectionType
             artPieceDataSource = Collection.of.artPiece[userLocation]
             headerTitle.text = userLocation.rawValue
+            headerView.backgroundColor = Collection.get.color(forColletionType: userLocation)
+            self.collection = userLocation
             tableView.reloadData()
         }
     }
