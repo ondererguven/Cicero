@@ -62,13 +62,13 @@ class PositionViewController: UIViewController {
             switch userLocation {
             case .appartamentiReali:
                 LocationManager.shared.currentArtPieceIndex = 0
-                _ = Media.librery.play(fileName: "Royal")
+                _ = Media.librery.play(fileName: "appartamentiReali")
             case .armeria:
                 LocationManager.shared.currentArtPieceIndex = 1
-                _ = Media.librery.play(fileName: "Armery")
+                _ = Media.librery.play(fileName: "armeria1")
             case .giardini:
                 LocationManager.shared.currentArtPieceIndex = 2
-                _ = Media.librery.play(fileName: "Garden")
+                _ = Media.librery.play(fileName: "giardini")
             }
             
             tableView.reloadData()
