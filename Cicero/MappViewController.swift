@@ -13,6 +13,10 @@ class MappViewController: UIViewController {
     @IBOutlet weak var dismissMapp: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        dismissMapp.isAccessibilityElement = true
+        dismissMapp.accessibilityLabel = "Chiudi Mappa"
+        dismissMapp.accessibilityTraits = UIAccessibilityTraitButton
+        dismissMapp.accessibilityValue = ""
         
     }
     
