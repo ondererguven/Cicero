@@ -14,6 +14,8 @@ class PositionViewController: UIViewController {
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var headerTitle: UILabel!
     @IBOutlet weak var phoneButton: UIButton!
+    
+    @IBOutlet weak var mapButton: NSLayoutConstraint!
 
     
     var cellHeight: CGFloat!
@@ -32,6 +34,19 @@ class PositionViewController: UIViewController {
         headerView.backgroundColor = Collection.get.color(forColletionType: collection)
         cellHeight = self.view.frame.height / 5
         headerView.frame.size.height = cellHeight * 2 / 3
+        
+        //Luigi: aggiunta accessibilità
+        phoneButton.isAccessibilityElement = true
+        phoneButton.accessibilityLabel = "Chiama Museo"
+        phoneButton.accessibilityTraits = UIAccessibilityTraitButton
+        phoneButton.accessibilityValue = ""
+        
+        mapButton.isAccessibilityElement = true
+        mapButton.accessibilityLabel = "Apri Mappa"
+        mapButton.accessibilityTraits = UIAccessibilityTraitButton
+        mapButton.accessibilityValue = ""
+        
+        
         
     }
     
