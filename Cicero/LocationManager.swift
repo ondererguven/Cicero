@@ -22,7 +22,7 @@ class LocationManager: CLLocationManager {
         self.requestAlwaysAuthorization()
         self.desiredAccuracy = kCLLocationAccuracyBest
         //Default Value to garden section
-        self.collectionAtCurrentLocation = .giardini
+        self.collectionAtCurrentLocation = .appartamentiReali
         //Default Value to second cell
         self.currentArtPieceIndex = 1
     }

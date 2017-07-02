@@ -25,8 +25,6 @@ class PositionViewCell: UITableViewCell {
         
         photo.contentMode = .scaleAspectFit
         photoContainer.contentMode = .scaleAspectFit
-        
-        
     }
     
     func setIcon(iconImage: UIImage, tintColor: UIColor, internalColor: UIColor, isSelected: Bool, type: ContainerType, isPrevius: Bool, isNext: Bool) {

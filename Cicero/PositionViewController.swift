@@ -88,14 +88,14 @@ extension PositionViewController: UITableViewDataSource, UITableViewDelegate {
 
         aCell.title.text = piece.title
         aCell.descriptions.text = piece.descr
+        aCell.selectionStyle = .none
         
         //Luigi: Aggiunta parte di accessibilità
         aCell.isAccessibilityElement = true
         aCell.accessibilityLabel = aCell.title.text
         aCell.accessibilityValue = piece.voiceOverDescription
         
-
-        
+        // appearence
         aCell.setIcon(
             iconImage: piece.image!,
             tintColor: Collection.get.color(forColletionType: collection),
