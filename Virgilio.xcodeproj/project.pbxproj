@@ -10,6 +10,9 @@
 		655CEBA81F08D5A70040FE21 /* giardini.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 655CEBA71F08D5A70040FE21 /* giardini.mp3 */; };
 		655CEBAB1F08DD370040FE21 /* armeria1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 655CEBA91F08DD370040FE21 /* armeria1.mp3 */; };
 		655CEBAC1F08DD370040FE21 /* appartamentiReali.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 655CEBAA1F08DD370040FE21 /* appartamentiReali.mp3 */; };
+		655CEBA81F08D5A70040FE21 /* Garden.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 655CEBA71F08D5A70040FE21 /* Garden.mp3 */; };
+		655CEBAB1F08DD370040FE21 /* Armery.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 655CEBA91F08DD370040FE21 /* Armery.mp3 */; };
+		655CEBAC1F08DD370040FE21 /* Royal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 655CEBAA1F08DD370040FE21 /* Royal.mp3 */; };
 		6C73326A1F08D94D003BAD6E /* MappViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7332691F08D94D003BAD6E /* MappViewController.swift */; };
 		813E14091F07D83D0044C5B5 /* PositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E14081F07D83D0044C5B5 /* PositionViewController.swift */; };
 		813E140B1F07DBEC0044C5B5 /* PositionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E140A1F07DBEC0044C5B5 /* PositionViewCell.swift */; };

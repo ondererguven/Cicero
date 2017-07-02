@@ -70,6 +70,7 @@ class PositionViewController: UIViewController {
                 LocationManager.shared.currentArtPieceIndex = 2
                 _ = Media.librery.play(fileName: "Garden")
             }
+            
             tableView.reloadData()
         }
     }
