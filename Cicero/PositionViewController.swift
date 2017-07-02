@@ -35,17 +35,6 @@ class PositionViewController: UIViewController {
         cellHeight = self.view.frame.height / 5
         headerView.frame.size.height = cellHeight * 2 / 3
         
-        //Luigi: Aggiunta parte di accessibilità
-        bathButton.isAccessibilityElement = true
-        bathButton.accessibilityLabel = "Posizione Bagni"
-        bathButton.accessibilityTraits = UIAccessibilityTraitButton
-        bathButton.accessibilityValue = "Per arrivare ai bagni procedi in fondo a destra"
-        
-        //Luigi: Aggiunta parte di accessibilità
-        foodButton.isAccessibilityElement = true
-        foodButton.accessibilityLabel = "Posizione Ristorazione"
-        foodButton.accessibilityTraits = UIAccessibilityTraitButton
-        foodButton.accessibilityValue = "Per arrivare alla ristorazione procedi in fondo a sinistra"
     }
     
     override func viewWillAppear(_ animated: Bool) {

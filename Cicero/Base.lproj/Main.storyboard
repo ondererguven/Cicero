@@ -124,13 +124,8 @@ Capodimonte</string>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owC-U5-ZR6">
-                                            <rect key="frame" x="8" y="8" width="39" height="33"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button" image="bathroom"/>
-                                        </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h17-al-0uf">
-                                            <rect key="frame" x="325" y="49" width="30" height="30"/>
+                                            <rect key="frame" x="330" y="49" width="30" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="30" id="5ie-Ky-Yhd"/>
                                                 <constraint firstAttribute="width" secondItem="h17-al-0uf" secondAttribute="height" multiplier="1:1" id="Rto-qh-vTQ"/>
@@ -138,18 +133,15 @@ Capodimonte</string>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <state key="normal" title="Button" image="mappa"/>
                                             <connections>
-                                                <segue destination="O3h-GA-OiJ" kind="show" id="cHW-2j-o1L"/>
+                                                <segue destination="O3h-GA-OiJ" kind="popoverPresentation" popoverAnchorView="h17-al-0uf" id="cHW-2j-o1L">
+                                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                </segue>
                                             </connections>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4oA-sA-bu1">
-                                            <rect key="frame" x="8" y="46" width="37" height="37"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button" image="TWC-Homepage-Icon-Knife-Fork"/>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" red="0.24705882352941178" green="0.32549019607843138" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="h17-al-0uf" secondAttribute="trailing" constant="20" id="FLu-cj-RkA"/>
+                                        <constraint firstAttribute="trailing" secondItem="h17-al-0uf" secondAttribute="trailing" constant="15" id="FLu-cj-RkA"/>
                                         <constraint firstAttribute="trailing" secondItem="Zgm-wn-lbx" secondAttribute="trailing" constant="8" id="Q0r-4R-nvI"/>
                                         <constraint firstItem="Zgm-wn-lbx" firstAttribute="top" secondItem="QlS-0i-69J" secondAttribute="top" constant="8" id="Tmb-J6-EPs"/>
                                         <constraint firstAttribute="bottom" secondItem="Zgm-wn-lbx" secondAttribute="bottom" constant="8" id="jVm-Tg-Ewq"/>
@@ -184,7 +176,7 @@ Capodimonte</string>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qp2-nv-3kw">
-                                                    <rect key="frame" x="112" y="55" width="247" height="21"/>
+                                                    <rect key="frame" x="112" y="56" width="247" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="RLl-Mb-axe"/>
                                                     </constraints>
@@ -192,11 +184,8 @@ Capodimonte</string>
                                                     <color key="textColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UwO-f7-B7K">
-                                                    <rect key="frame" x="112" y="84" width="247" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="i2u-BB-Xyr"/>
-                                                    </constraints>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UwO-f7-B7K">
+                                                    <rect key="frame" x="112" y="84.5" width="247" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.78823529411764703" green="0.78823529411764703" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -260,8 +249,6 @@ Capodimonte</string>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="bathButton" destination="owC-U5-ZR6" id="Gkm-kD-ccA"/>
-                        <outlet property="foodButton" destination="4oA-sA-bu1" id="sts-xg-1Nd"/>
                         <outlet property="headerTitle" destination="Zgm-wn-lbx" id="gnT-7c-uc1"/>
                         <outlet property="headerView" destination="QlS-0i-69J" id="1z7-X4-FkA"/>
                         <outlet property="tableView" destination="oMk-gG-jdk" id="YcL-Rr-2SV"/>
@@ -271,10 +258,10 @@ Capodimonte</string>
             </objects>
             <point key="canvasLocation" x="1144.8" y="130.88455772113943"/>
         </scene>
-        <!--View Controller-->
+        <!--Mapp View Controller-->
         <scene sceneID="Ohs-nH-AAl">
             <objects>
-                <viewController id="O3h-GA-OiJ" sceneMemberID="viewController">
+                <viewController id="O3h-GA-OiJ" customClass="MappViewController" customModule="Virgilio" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zhO-DJ-aN3"/>
                         <viewControllerLayoutGuide type="bottom" id="ZPk-52-cOO"/>
@@ -284,7 +271,7 @@ Capodimonte</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wrc-xj-2PY" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mappa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c14-y1-8VE">
                                         <rect key="frame" x="8" y="45" width="359" height="33.5"/>
@@ -292,17 +279,31 @@ Capodimonte</string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJR-Sw-hPT">
+                                        <rect key="frame" x="8" y="47" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="MJR-Sw-hPT" secondAttribute="height" multiplier="1:1" id="Cgc-Za-TDG"/>
+                                            <constraint firstAttribute="height" constant="30" id="mtG-k4-7Pj"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="&lt;" image="leftArrow"/>
+                                        <connections>
+                                            <action selector="dismissMappDidPressed:" destination="O3h-GA-OiJ" eventType="touchUpInside" id="QbF-eA-B0m"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.2470588235" green="0.32549019610000002" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.6588235294117647" green="0.14509803921568626" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="MJR-Sw-hPT" firstAttribute="centerY" secondItem="c14-y1-8VE" secondAttribute="centerY" id="Ahb-JP-cdL"/>
                                     <constraint firstItem="c14-y1-8VE" firstAttribute="leading" secondItem="wrc-xj-2PY" secondAttribute="leading" constant="8" id="IQP-qW-koQ"/>
-                                    <constraint firstAttribute="height" constant="90" id="Wka-As-FrO"/>
+                                    <constraint firstAttribute="height" constant="110" id="Wka-As-FrO"/>
                                     <constraint firstItem="c14-y1-8VE" firstAttribute="top" secondItem="wrc-xj-2PY" secondAttribute="top" constant="45" id="oCc-CN-FDH"/>
                                     <constraint firstAttribute="trailing" secondItem="c14-y1-8VE" secondAttribute="trailing" constant="8" id="pFE-Fv-4K6"/>
+                                    <constraint firstItem="MJR-Sw-hPT" firstAttribute="leading" secondItem="wrc-xj-2PY" secondAttribute="leading" constant="8" id="whu-VM-z0O"/>
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapPiano1" translatesAutoresizingMaskIntoConstraints="NO" id="ukI-ed-li9">
-                                <rect key="frame" x="-321" y="115" width="1017" height="552"/>
+                                <rect key="frame" x="-321" y="135" width="1017" height="532"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -315,6 +316,9 @@ Capodimonte</string>
                             <constraint firstItem="ukI-ed-li9" firstAttribute="centerX" secondItem="xdL-lB-yDD" secondAttribute="centerX" id="rhQ-Rz-yxn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dismissMapp" destination="MJR-Sw-hPT" id="mql-XU-6YB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="geo-XJ-POv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -322,8 +326,7 @@ Capodimonte</string>
         </scene>
     </scenes>
     <resources>
-        <image name="TWC-Homepage-Icon-Knife-Fork" width="300" height="300"/>
-        <image name="bathroom" width="300" height="300"/>
+        <image name="leftArrow" width="626" height="626"/>
         <image name="mapPiano1" width="1017" height="2179"/>
         <image name="mappa" width="128" height="128"/>
         <image name="museo" width="1280" height="898"/>
