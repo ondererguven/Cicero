@@ -32,7 +32,7 @@
 		813E141B1F082C350044C5B5 /* AVManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVManager.swift; sourceTree = "<group>"; };
 		813E141D1F0835540044C5B5 /* DesignTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignTool.swift; sourceTree = "<group>"; };
 		EC0E40021F07DE9E00FBC624 /* BeaconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconManager.swift; sourceTree = "<group>"; };
-		EC2334D91F07904B00C80637 /* Cicero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cicero.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC2334D91F07904B00C80637 /* Virgilio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Virgilio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC2334DC1F07904B00C80637 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC2334DE1F07904B00C80637 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EC2334E11F07904B00C80637 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 		EC2334D01F07904B00C80637 = {
 			isa = PBXGroup;
 			children = (
-				EC2334DB1F07904B00C80637 /* Cicero */,
+				EC2334DB1F07904B00C80637 /* Virgilio */,
 				EC2334DA1F07904B00C80637 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,12 +64,12 @@
 		EC2334DA1F07904B00C80637 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EC2334D91F07904B00C80637 /* Cicero.app */,
+				EC2334D91F07904B00C80637 /* Virgilio.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EC2334DB1F07904B00C80637 /* Cicero */ = {
+		EC2334DB1F07904B00C80637 /* Virgilio */ = {
 			isa = PBXGroup;
 			children = (
 				EC2334F11F07967500C80637 /* Helpers */,
@@ -79,6 +79,7 @@
 				EC2334DC1F07904B00C80637 /* AppDelegate.swift */,
 				EC2334E81F07904B00C80637 /* Info.plist */,
 			);
+			name = Virgilio;
 			path = Cicero;
 			sourceTree = "<group>";
 		};
@@ -126,9 +127,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EC2334D81F07904B00C80637 /* Cicero */ = {
+		EC2334D81F07904B00C80637 /* Virgilio */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EC2334EB1F07904B00C80637 /* Build configuration list for PBXNativeTarget "Cicero" */;
+			buildConfigurationList = EC2334EB1F07904B00C80637 /* Build configuration list for PBXNativeTarget "Virgilio" */;
 			buildPhases = (
 				EC2334D51F07904B00C80637 /* Sources */,
 				EC2334D61F07904B00C80637 /* Frameworks */,
@@ -138,9 +139,9 @@
 			);
 			dependencies = (
 			);
-			name = Cicero;
+			name = Virgilio;
 			productName = Cicero;
-			productReference = EC2334D91F07904B00C80637 /* Cicero.app */;
+			productReference = EC2334D91F07904B00C80637 /* Virgilio.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -160,7 +161,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EC2334D41F07904B00C80637 /* Build configuration list for PBXProject "Cicero" */;
+			buildConfigurationList = EC2334D41F07904B00C80637 /* Build configuration list for PBXProject "Virgilio" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -173,7 +174,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EC2334D81F07904B00C80637 /* Cicero */,
+				EC2334D81F07904B00C80637 /* Virgilio */,
 			);
 		};
 /* End PBXProject section */
@@ -358,7 +359,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EC2334D41F07904B00C80637 /* Build configuration list for PBXProject "Cicero" */ = {
+		EC2334D41F07904B00C80637 /* Build configuration list for PBXProject "Virgilio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC2334E91F07904B00C80637 /* Debug */,
@@ -367,7 +368,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EC2334EB1F07904B00C80637 /* Build configuration list for PBXNativeTarget "Cicero" */ = {
+		EC2334EB1F07904B00C80637 /* Build configuration list for PBXNativeTarget "Virgilio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC2334EC1F07904B00C80637 /* Debug */,
