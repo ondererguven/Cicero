@@ -26,6 +26,15 @@ class PositionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        switch collection {
+        case .appartamentiReali:
+            _ = Media.librery.play(fileName: "Royal")
+        case .armeria:
+            _ = Media.librery.play(fileName: "Armery")
+        case .giardini:
+            _ = Media.librery.play(fileName: "Garden")
+        }
+        
         // load data
         artPieceDataSource = Collection.of.artPiece[collection]
         

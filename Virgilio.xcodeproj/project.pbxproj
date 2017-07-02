@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		655CEBA81F08D5A70040FE21 /* Garden.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 655CEBA71F08D5A70040FE21 /* Garden.mp3 */; };
+		655CEBAB1F08DD370040FE21 /* Armery.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 655CEBA91F08DD370040FE21 /* Armery.mp3 */; };
+		655CEBAC1F08DD370040FE21 /* Royal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 655CEBAA1F08DD370040FE21 /* Royal.mp3 */; };
 		813E14091F07D83D0044C5B5 /* PositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E14081F07D83D0044C5B5 /* PositionViewController.swift */; };
 		813E140B1F07DBEC0044C5B5 /* PositionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E140A1F07DBEC0044C5B5 /* PositionViewCell.swift */; };
 		813E140D1F07E11E0044C5B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 813E140C1F07E11E0044C5B5 /* Assets.xcassets */; };
@@ -24,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		655CEBA71F08D5A70040FE21 /* Garden.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Garden.mp3; path = ../../Desktop/HackNight/Contents/Giardini/Garden.mp3; sourceTree = "<group>"; };
+		655CEBA91F08DD370040FE21 /* Armery.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Armery.mp3; path = ../../Desktop/Armery.mp3; sourceTree = "<group>"; };
+		655CEBAA1F08DD370040FE21 /* Royal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Royal.mp3; path = ../../Desktop/Royal.mp3; sourceTree = "<group>"; };
 		813E14081F07D83D0044C5B5 /* PositionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionViewController.swift; sourceTree = "<group>"; };
 		813E140A1F07DBEC0044C5B5 /* PositionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionViewCell.swift; sourceTree = "<group>"; };
 		813E140C1F07E11E0044C5B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +59,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		655CEBA21F08D3E00040FE21 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				655CEBA71F08D5A70040FE21 /* Garden.mp3 */,
+				655CEBA91F08DD370040FE21 /* Armery.mp3 */,
+				655CEBAA1F08DD370040FE21 /* Royal.mp3 */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
 		EC2334D01F07904B00C80637 = {
 			isa = PBXGroup;
 			children = (
@@ -75,7 +91,6 @@
 				EC2334F11F07967500C80637 /* Helpers */,
 				EC2334EE1F07963A00C80637 /* Model */,
 				EC2334EF1F07964700C80637 /* View */,
-				EC2334F01F07964D00C80637 /* Controller */,
 				EC2334DC1F07904B00C80637 /* AppDelegate.swift */,
 				EC2334E81F07904B00C80637 /* Info.plist */,
 			);
@@ -86,6 +101,7 @@
 		EC2334EE1F07963A00C80637 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				655CEBA21F08D3E00040FE21 /* Sounds */,
 				813E14191F07FF9B0044C5B5 /* ArtPieceCollection.swift */,
 				813E14171F07FF740044C5B5 /* ArtPiece.swift */,
 			);
@@ -98,6 +114,7 @@
 				EC2334E01F07904B00C80637 /* Main.storyboard */,
 				EC2334E51F07904B00C80637 /* LaunchScreen.storyboard */,
 				813E140A1F07DBEC0044C5B5 /* PositionViewCell.swift */,
+				EC2334F01F07964D00C80637 /* Controller */,
 				813E140C1F07E11E0044C5B5 /* Assets.xcassets */,
 			);
 			name = View;
@@ -184,7 +201,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				655CEBAB1F08DD370040FE21 /* Armery.mp3 in Resources */,
+				655CEBA81F08D5A70040FE21 /* Garden.mp3 in Resources */,
 				EC2334E71F07904B00C80637 /* LaunchScreen.storyboard in Resources */,
+				655CEBAC1F08DD370040FE21 /* Royal.mp3 in Resources */,
 				813E140D1F07E11E0044C5B5 /* Assets.xcassets in Resources */,
 				EC2334E21F07904B00C80637 /* Main.storyboard in Resources */,
 			);
