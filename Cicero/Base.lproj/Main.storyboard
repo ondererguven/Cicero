@@ -138,17 +138,17 @@ Capodimonte</string>
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="161"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e4T-kB-9vB">
-                                                    <rect key="frame" x="8" y="0.0" width="96.5" height="160.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="e4T-kB-9vB" secondAttribute="height" multiplier="3:5" id="Y4b-FM-XeH"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xFN-hP-1ka" userLabel="topCircle">
                                                     <rect key="frame" x="8" y="0.0" width="96.5" height="160.5"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NpQ-Z4-0jM" userLabel="bottomCircle">
                                                     <rect key="frame" x="8" y="0.0" width="96.5" height="160.5"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e4T-kB-9vB">
+                                                    <rect key="frame" x="8" y="0.0" width="96.5" height="160.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="e4T-kB-9vB" secondAttribute="height" multiplier="3:5" id="Y4b-FM-XeH"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h4s-Ky-uhA">
                                                     <rect key="frame" x="36" y="60" width="40" height="40.5"/>

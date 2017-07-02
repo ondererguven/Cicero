@@ -101,8 +101,11 @@ class PositionViewCell: UITableViewCell {
                 topCircle.tintColor = Palette.colorFor.lightGray
                 
                 bottomCircle.image = nil
-                
             }
+            
+            photoContainer.image = #imageLiteral(resourceName: "circleBigFull")
+            photoContainer.image = photoContainer.image!.withRenderingMode(.alwaysTemplate)
+            photoContainer.tintColor = internalColor
         }
         
     }
