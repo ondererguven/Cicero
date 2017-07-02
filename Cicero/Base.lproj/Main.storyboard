@@ -119,7 +119,7 @@ Capodimonte</string>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgm-wn-lbx">
-                                            <rect key="frame" x="8" y="8" width="359" height="112"/>
+                                            <rect key="frame" x="55" y="8" width="265" height="112"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -156,11 +156,11 @@ Capodimonte</string>
                                     <constraints>
                                         <constraint firstItem="B7J-Xq-MKE" firstAttribute="leading" secondItem="QlS-0i-69J" secondAttribute="leading" constant="20" id="C7u-vL-yhF"/>
                                         <constraint firstAttribute="trailing" secondItem="h17-al-0uf" secondAttribute="trailing" constant="20" id="FLu-cj-RkA"/>
-                                        <constraint firstAttribute="trailing" secondItem="Zgm-wn-lbx" secondAttribute="trailing" constant="8" id="Q0r-4R-nvI"/>
+                                        <constraint firstAttribute="trailing" secondItem="Zgm-wn-lbx" secondAttribute="trailing" constant="55" id="Q0r-4R-nvI"/>
                                         <constraint firstItem="B7J-Xq-MKE" firstAttribute="centerY" secondItem="Zgm-wn-lbx" secondAttribute="centerY" id="R33-sc-0Tc"/>
                                         <constraint firstItem="Zgm-wn-lbx" firstAttribute="top" secondItem="QlS-0i-69J" secondAttribute="top" constant="8" id="Tmb-J6-EPs"/>
                                         <constraint firstAttribute="bottom" secondItem="Zgm-wn-lbx" secondAttribute="bottom" constant="8" id="jVm-Tg-Ewq"/>
-                                        <constraint firstItem="Zgm-wn-lbx" firstAttribute="leading" secondItem="QlS-0i-69J" secondAttribute="leading" constant="8" id="lkJ-vS-DO6"/>
+                                        <constraint firstItem="Zgm-wn-lbx" firstAttribute="leading" secondItem="QlS-0i-69J" secondAttribute="leading" constant="55" id="lkJ-vS-DO6"/>
                                         <constraint firstItem="h17-al-0uf" firstAttribute="centerY" secondItem="QlS-0i-69J" secondAttribute="centerY" id="od3-rJ-vd1"/>
                                         <constraint firstItem="B7J-Xq-MKE" firstAttribute="width" secondItem="B7J-Xq-MKE" secondAttribute="height" multiplier="1:1" id="rmr-N5-keO"/>
                                     </constraints>
@@ -336,6 +336,8 @@ Capodimonte</string>
                     </view>
                     <connections>
                         <outlet property="dismissMapp" destination="MJR-Sw-hPT" id="mql-XU-6YB"/>
+                        <outlet property="headerTitle" destination="c14-y1-8VE" id="sSy-wr-KX1"/>
+                        <outlet property="headerView" destination="wrc-xj-2PY" id="nob-BB-SVD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="geo-XJ-POv" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -35,16 +35,26 @@ class PositionViewController: UIViewController {
         cellHeight = self.view.frame.height / 5
         headerView.frame.size.height = cellHeight * 2 / 3
         
+        //Mattia: aggiunta accessibilità
+        headerTitle.isAccessibilityElement = true
+        let headerFrame = CGRect(x:headerView.layer.bounds.width/5, y:0, width:headerView.layer.bounds.width*3/5, height:headerView.layer.bounds.height)
+        headerTitle.accessibilityFrame = UIAccessibilityConvertFrameToScreenCoordinates(headerFrame, self.view)
+        
+        
         //Luigi: aggiunta accessibilità
         phoneButton.isAccessibilityElement = true
         phoneButton.accessibilityLabel = "Chiama Museo"
         phoneButton.accessibilityTraits = UIAccessibilityTraitButton
         phoneButton.accessibilityValue = ""
+        let phoneFrame = CGRect(x:0, y:0, width:headerView.layer.bounds.width/5, height:headerView.layer.bounds.height)
+        phoneButton.accessibilityFrame = UIAccessibilityConvertFrameToScreenCoordinates(phoneFrame, self.view)
         
         mapButton.isAccessibilityElement = true
         mapButton.accessibilityLabel = "Apri Mappa"
         mapButton.accessibilityTraits = UIAccessibilityTraitButton
         mapButton.accessibilityValue = ""
+        let mapFrame = CGRect(x:headerView.layer.bounds.width*4/5, y:0, width:headerView.layer.bounds.width/5, height:headerView.layer.bounds.height)
+        mapButton.accessibilityFrame = UIAccessibilityConvertFrameToScreenCoordinates(mapFrame, self.view)
         
         
         
