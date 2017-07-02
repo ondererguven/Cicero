@@ -56,6 +56,7 @@ class PositionViewController: UIViewController {
             let userLocation = info["location"] as! CollectionType
             print(userLocation)
             artPieceDataSource = Collection.of.artPiece[userLocation]
+            
             headerTitle.text = userLocation.rawValue
             headerView.backgroundColor = Collection.get.color(forColletionType: userLocation)
             self.collection = userLocation
@@ -72,6 +73,9 @@ class PositionViewController: UIViewController {
             }
             
             tableView.reloadData()
+            
+            let selectedCell = tableView.cellForRow(at: IndexPath(row: LocationManager.shared.currentArtPieceIndex, section: 0)) as! PositionViewCell
+            UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, selectedCell.accessibilityValue)
         }
     }
 
