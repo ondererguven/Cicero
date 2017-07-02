@@ -51,6 +51,7 @@ class PositionViewController: UIViewController {
     func locationChanged(notification: Notification) {
         if let info = notification.userInfo {
             let userLocation = info["location"] as! CollectionType
+            print(userLocation)
             artPieceDataSource = Collection.of.artPiece[userLocation]
             headerTitle.text = userLocation.rawValue
             headerView.backgroundColor = Collection.get.color(forColletionType: userLocation)
@@ -62,8 +63,8 @@ class PositionViewController: UIViewController {
                 LocationManager.shared.currentArtPieceIndex = 1
             case .giardini:
                 LocationManager.shared.currentArtPieceIndex = 2
-            tableView.reloadData()
             }
+            tableView.reloadData()
         }
     }
 
