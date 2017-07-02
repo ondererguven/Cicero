@@ -10,6 +10,10 @@
 		655CEBA81F08D5A70040FE21 /* Garden.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 655CEBA71F08D5A70040FE21 /* Garden.mp3 */; };
 		655CEBAB1F08DD370040FE21 /* Armery.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 655CEBA91F08DD370040FE21 /* Armery.mp3 */; };
 		655CEBAC1F08DD370040FE21 /* Royal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 655CEBAA1F08DD370040FE21 /* Royal.mp3 */; };
+<<<<<<< HEAD
+=======
+		6C73326A1F08D94D003BAD6E /* MappViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7332691F08D94D003BAD6E /* MappViewController.swift */; };
+>>>>>>> 32ab61ca80ea7aa5c820493b2c3d32ea5e7e1a29
 		813E14091F07D83D0044C5B5 /* PositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E14081F07D83D0044C5B5 /* PositionViewController.swift */; };
 		813E140B1F07DBEC0044C5B5 /* PositionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E140A1F07DBEC0044C5B5 /* PositionViewCell.swift */; };
 		813E140D1F07E11E0044C5B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 813E140C1F07E11E0044C5B5 /* Assets.xcassets */; };
