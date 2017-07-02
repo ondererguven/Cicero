@@ -39,10 +39,6 @@ class PositionViewCell: UITableViewCell {
         photoContainer.image = photoContainer.image!.withRenderingMode(.alwaysTemplate)
         photoContainer.tintColor = internalColor
         
-        if isSelected {
-            title.textColor = internalColor
-        }
-        
         switch type {
         case .start:
             topCircle.image = nil
