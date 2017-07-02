@@ -57,7 +57,7 @@ class PositionViewCell: UITableViewCell {
             
             bottomCircle.image = #imageLiteral(resourceName: "bottomCircle")
             bottomCircle.image = bottomCircle.image!.withRenderingMode(.alwaysTemplate)
-            bottomCircle.tintColor = tintColor
+            bottomCircle.tintColor = Palette.colorFor.lightGray
             
         case .ending:
             topCircle.image = #imageLiteral(resourceName: "topCircle")
