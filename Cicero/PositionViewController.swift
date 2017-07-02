@@ -84,21 +84,24 @@ extension PositionViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let aCell = tableView.dequeueReusableCell(withIdentifier: "positionCell", for: indexPath) as! PositionViewCell
         
-        aCell.title.text = artPieceDataSource[indexPath.row].title
-        aCell.descriptions.text = artPieceDataSource[indexPath.row].descr
+        let piece = artPieceDataSource[indexPath.row]
+
+        aCell.title.text = piece.title
+        aCell.descriptions.text = piece.descr
         
         //Luigi: Aggiunta parte di accessibilità
         aCell.isAccessibilityElement = true
         aCell.accessibilityLabel = aCell.title.text
-        aCell.accessibilityValue = artPieceDataSource[indexPath.row].voiceOverDescription
+        aCell.accessibilityValue = piece.voiceOverDescription
         
 
+        
         aCell.setIcon(
-            iconImage: artPieceDataSource[indexPath.row].image!,
+            iconImage: piece.image!,
             tintColor: Collection.get.color(forColletionType: collection),
             internalColor: Collection.get.color(forColletionType: collection),
             isSelected: indexPath.row == LocationManager.shared.currentArtPieceIndex,
-            type: artPieceDataSource[indexPath.row].type
+            type: piece.type
         )
         
         
