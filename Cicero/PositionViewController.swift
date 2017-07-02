@@ -55,7 +55,15 @@ class PositionViewController: UIViewController {
             headerTitle.text = userLocation.rawValue
             headerView.backgroundColor = Collection.get.color(forColletionType: userLocation)
             self.collection = userLocation
+            switch userLocation {
+            case .appartamentiReali:
+                LocationManager.shared.currentArtPieceIndex = 0
+            case .armeria:
+                LocationManager.shared.currentArtPieceIndex = 1
+            case .giardini:
+                LocationManager.shared.currentArtPieceIndex = 2
             tableView.reloadData()
+            }
         }
     }
 
